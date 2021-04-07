@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!-- prefix属性でOGP宣言 -->
+<html lang="ja" prefix="og:http://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【完全予約制】千代田区の1対1にこだわった美容室｜シナジーサロン</title>
+    <meta name="description" content="完全予約制で他のお客様やスタッフの存在を気にすることがない1対1の空間を提供する美容室です。周囲の視線が気にならない自分だけの空間でリラックスしていただきながら、&quot;髪&quot;だけではなく&quot;心&quot;も安げる時間をご提供します。">
+
+    <!-- OGP -->
+    <meta property="og:url" content="https://yusuke-k-code.github.io/synergysalon/public/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="【完全予約制】千代田区の1対1にこだわった美容室｜シナジーサロン">
+    <meta property="og:description" content="完全予約制で他のお客様やスタッフの存在を気にすることがない1対1の空間を提供する美容室です。周囲の視線が気にならない自分だけの…">
+    <meta property="og:site_name" content="Synergy Salon">
+    <meta property="og:image" content="https://yusuke-k-code.github.io/synergysalon/public/assets/img/pc/top-bg1.jpg">
+    <!-- Twitter設定 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- //OGPここまで -->
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/img/pc/favicon.ico">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- ファーストビュー -->
+    <section class="fv">
+        <!-- スライダー -->
+        <div class="swiper-container fv__frame">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"></div>
+                <div class="swiper-slide slide2"></div>
+            </div>
+            <!-- ページネーション -->
+            <div class="swiper-pagination"></div>
+            <!-- ロゴ部分 -->
+            <h1 class="fv__logo fadeIn-fv">
+                <img src="./assets/img/pc/logo.png" alt="シナジーサロン">
+            </h1>
+            <!-- スクロール表示 -->
+            <div class="fv__scroll fadeIn-fv">
+                <a href="#concept">
+                    <span>SCROLL DOWN</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- //ここまでファーストビュー -->
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header__inner">
+            <!-- <h1 class="header__logo">
+                <a href="#" class="header__logo-link">
+                    <img src="./assets/img/pc/logo-noruby.png" alt="シナジーサロン">
+                </a>
+            </h1> -->
+            <!-- ナビゲーション -->
+            <nav class="header__nav" aria-label="サイト内のメニュー">
+                <ul class="header__nav-lists">
+                    <li class="header__nav-list">
+                        <a class="header__nav-link" href="#">トップ<span>HOME</span></a>
+                    </li>
+                    <li class="header__nav-list">
+                        <a class="header__nav-link" href="#concept">コンセプト<span>CONCEPT</span></a>
+                    </li>
+                    <li class="header__nav-list">
+                        <a class="header__nav-link" href="#menu">メニュー<span>MENU</span></a>
+                    </li>
+                    <li class="header__nav-list">
+                        <a class="header__nav-link" href="#stylist">スタイリスト<span>STYLIST</span></a>
+                    </li>
+                    <li class="header__nav-list">
+                        <a class="header__nav-link" href="#info">店舗案内<span>INFO</span></a>
+                    </li>
+                    <li class="header__nav-list">
+                        <a class="header__nav-link" href="#reserve">ご予約<span>RESERVE</span></a>
+                    </li>
+                    <li class="header__nav-list">
+                        <a class="header__nav-link" href="#contact">お問い合わせ<span>CONTACT</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__info">
+                <address class="header__info-tel">
+                    <a class="header__info-link" href="tel:012-345-6789"><span>TEL</span>012-345-6789</a>
+                </address>
+                <div class="header__info-container">
+                    <li class="header__info-covid" id="js-infoCovid">感染症対策について</li>
+                    <li class="header__info-instagram">
+                        <a class="header__info-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/insta_sample_account/?hl=ja"><img src="./assets/img/pc/instagram-icon.png" alt="Instagram" width="24px"></a>
+                    </li>
+                </div>
+            </div>
+
+            <!-- ドロワーメニューボタンー -->
+            <div class="drawer__btn" id="js-drawer__btn">
+                <span class="drawer__btn-bar"></span>
+                <span class="drawer__btn-bar"></span>
+                <span class="drawer__btn-bar"></span>
+            </div>
+            <!-- ドロワーメニューのオーバーレイ -->
+            <div class="drawer__overlay" id="js-drawer__overlay"></div>
+            <!-- ドロワーメニュー -->
+            <nav class="drawer" id="js-drawer" aria-label="サイト内のドロワーメニュー">
+                <ul class="drawer__lists">
+                    <li class="drawer__list">
+                        <a class="drawer__link" href="#">HOME</a>
+                    </li>
+                    <li class="drawer__list">
+                        <a class="drawer__link" href="#concept">コンセプト</a>
+                    </li>
+                    <li class="drawer__list">
+                        <a class="drawer__link" href="#menu">メニュー</a>
+                    </li>
+                    <li class="drawer__list">
+                        <a class="drawer__link" href="#stylist">スタイリスト</a>
+                    </li>
+                    <li class="drawer__list">
+                        <a class="drawer__link" href="#info">店舗案内</a>
+                    </li>
+                    <li class="drawer__list">
+                        <a class="drawer__link" href="#reserve">ご予約</a>
+                    </li>
+                    <li class="drawer__list">
+                        <a class="drawer__link" href="#contact">お問い合わせ</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- //ここまでナビゲーション -->
+        </div>
+        <!-- モーダル｜感染症対策について -->
+        <div class="modal-covid" id="js-modal-covid">
+            <div class="modal-covid__overlay" id="js-modal-covid__overlay"></div>
+            <section class="modal-covid__container">
+                <h2 class="sectionTitle"><span class="sectionTitle-box left">感染症対策について</span></h2>
+                <ul class="modal-covid__items">
+                    <li class="modal-covid__item"><img src="./assets/img/pc/covid1.svg" alt="こまめな換気"></li>
+                    <li class="modal-covid__item"><img src="./assets/img/pc/covid2.svg" alt="マスク着用"></li>
+                    <li class="modal-covid__item"><img src="./assets/img/pc/covid3.svg" alt="除菌・消毒"></li>
+                    <li class="modal-covid__item"><img src="./assets/img/pc/covid4.svg" alt="検温実施"></li>
+                    <li class="modal-covid__item"><img src="./assets/img/pc/covid5.svg" alt="トレイでの金銭やりとり"></li>
+                </ul>
+                <button class="modal-covid__btn" id="js-modal-covid__btn">閉じる</button>
+            </section>
+        </div>
+        <!-- //ここまでモーダル｜感染症対策について -->
+    </header>
+    <!-- //ここまでヘッダー -->
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- コンセプト -->
+        <section class="concept inner" id="concept">
+            <h2 class="sectionTitle fadeIn"><span class="sectionTitle-box left">コンセプト</span></h2>
+            <div class="concept__textBox">
+                <p class="concept__header fadeIn">
+                    １対１にこだわった、１人だけの空間で、<br>
+                    自分だけの美容時間を。<br>
+                    身近な”あなた専用サロン”です。
+                </p>
+                <p class="concept__text fadeIn">
+                    美容室のほとんどは、複数のスタッフと複数のお客様が１つの空間に集まります。場合によっては複数人のお客様を１人のスタッフが同時に担当することも。<br>しかし、それだとお客様がリラックスできないと感じ、当サロンは完全予約制で他のお客様とバッティングをしない１対１の空間をご提供いたします。
+                </p>
+            </div>
+            <div class="sectionSubTitle left fadeIn-under">CONCEPT</div>
+        </section>
+        <!-- //ここまでコンセプト -->
+        
+        <!-- メニュー -->
+        <section class="menu" id="menu">
+            <div class="menu__wrapper inner">
+                <h2 class="sectionTitle shadow fadeIn"><span class="sectionTitle-box right white">メニュー</span></h2>
+                <div class="menu__board fadeIn">
+                    <section class="menu__board-left">
+                        <h3 class="menu__board-title">Cut & Perm</h3>
+                        <dl class="menu__lists">
+                            <div class="menu__list">
+                                <dt class="menu__list-title">カット</dt>
+                                <dd class="menu__list-price indent">¥6,000</dd>
+                            </div>
+                            <div class="menu__list">
+                                <dt class="menu__list-title">カット&スタイリング</dt>
+                                <dd class="menu__list-price indent">¥7,000</dd>
+                            </div>
+                            <div class="menu__list ">
+                                <dt class="menu__list-title">スタンダードパーマ</dt>
+                                <dd class="menu__list-price">¥4,500~</dd>
+                            </div>
+                            <div class="menu__list">
+                                <dt class="menu__list-title">サプリメントパーマ</dt>
+                                <dd class="menu__list-price">¥5,000~</dd>
+                            </div>
+                            <div class="menu__list">
+                                <dt class="menu__list-title">デジタルパーマ</dt>
+                                <dd class="menu__list-price">¥4,500~</dd>
+                            </div>
+                        </dl>
+                    </section>
+                    <section class="menu__board-right">
+                        <h3 class="menu__board-title">Other</h3>
+                        <dl class="menu__lists">
+                            <div class="menu__list">
+                                <dt class="menu__list-title">縮毛矯正</dt>
+                                <dd class="menu__list-price">¥16,000~</dd>
+                            </div>
+                            <div class="menu__list">
+                                <dt class="menu__list-title">高濃度「炭酸泉」ソーダスパ
+                                </dt>
+                                <dd class="menu__list-price indent">¥1,000</dd>
+                            </div>
+                            <div class="menu__list">
+                                <dt class="menu__list-title">デザイニングカラー</dt>
+                                <dd class="menu__list-price">¥5,000~</dd>
+                            </div>
+                            <div class="menu__list">
+                                <dt class="menu__list-title">髪質改善</dt>
+                                <dd class="menu__list-price indent">¥3,500</dd>
+                            </div>
+                            <div class="menu__list">
+                                <dt class="menu__list-title">キッズカット</dt>
+                                <dd class="menu__list-price indent">¥2,000</dd>
+                            </div>
+                        </dl>
+                    </section>
+                </div>
+                <div class="menu__notice fadeIn">
+                    <p class="menu__notice-text">◆ 価格は全て税込です。</p>
+                    <p class="menu__notice-text">◆ 親子、兄弟、カップルなど、２名様まででしたらご一緒に施術も可能です。</p>
+                </div>
+                <div class="sectionSubTitle right white fadeIn-under">MENU</div>
+            </div>
+        </section>
+        <!-- //ここまでメニュー -->
+
+        <!-- スタイル -->
+        <div class="style">
+            <div class="style__wrapper">
+                <div class="style__arrow fadeIn">
+                    <span class="style__arrow-line"></span>
+                    <p class="style__arrow-text">Style</p>
+                </div>
+                <ul class="style__items">
+                    <li class="style__item">
+                        <p class="style__item-name"><span>Perm</span></p>
+                        <div class="style__item-img">
+                            <img src="./assets/img/pc/style1.png" alt="女性パーマ例" class="fadeIn">
+                        </div>
+                    </li>
+                    <li class="style__item">
+                        <p class="style__item-name"><span>Kids</span></p>
+                        <div class="style__item-img">
+                            <img src="./assets/img/pc/style2.png" alt="子どもカット例" class="fadeIn">
+                        </div>
+                    </li>
+                    <li class="style__item">
+                        <p class="style__item-name"><span>Men's</span></p>
+                        <div class="style__item-img">
+                            <img src="./assets/img/pc/style3.png" alt="男性カット例" class="fadeIn">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //ここまでスタイル -->
+
+        <!-- スタイリスト -->
+        <section class="stylist inner" id="stylist">
+            <h2 class="sectionTitle fadeIn"><span class="sectionTitle-box left">スタイリスト</span></h2>
+            <div class="stylist__wrapper">
+                <div class="stylist__profile">
+                    <div class="stylist__container">
+                        <div class="stylist__img">
+                            <img src="./assets/img/pc/stylist.jpg" alt="シナジーサロン代表の支那寺" class="fadeIn">
+                        </div>
+                        <div class="stylist__career fadeIn">
+                            <h3 class="stylist__career-title">経歴</h3>
+                            <p class="stylist__career-year">2001年</p>
+                            <p class="stylist__career-biography">
+                                美容業界に入り複数店舗で経験を積み<br>
+                                国内外のコンテンストに参加
+                            </p>
+                            <p class="stylist__career-year">2018年</p>
+                            <p class="stylist__career-biography">
+                                美容師コンテスト金賞を受賞
+                            </p>
+                            <p class="stylist__career-year">2020年3月</p>
+                            <p class="stylist__career-biography">
+                                シナジーサロンオープン
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stylist__greeting">
+                    <div class="stylist__greeting-container fadeIn">
+                        <p class="stylist__greeting-text">
+                            はじめまして。<br>
+                            シナジーサロン代表の支那寺 太郎です。
+                        </p>
+                        <p class="stylist__greeting-text">
+                            2020年3月にこのシナジーサロンをオープンしました。<br>
+                            お客様が本当にリラックスできる環境を作りたい。<br>
+                            お店に入ってから出るまで、<br>
+                            あなた専用の美容空間でありたい。<br>
+                            そんな想いを込めたサロンです。<br>
+                            あなたのご要望やご相談をぜひお聞かせください。<br>
+                            私が解決いたします。
+                        </p>
+                        <p class="stylist__greeting-text">
+                            プライベートではアウトドアが大好きで、よくキャンプに行っています。趣味やお店のことなどもインスタグラムに載せておりますので、よろしければご覧ください。
+                        </p>
+                    </div>
+                    <p class="stylist__greeting-name">支那寺 太郎 shinaji taro</p>
+                </div>
+            </div>
+            <div class="sectionSubTitle left fadeIn-under">STYLIST</div>
+        </section>
+        <!-- //ここまでスタイリスト -->
+
+        <!-- インスタグラム -->
+        <div class="insta">
+            <div class="insta__wrapper">
+                <div class="insta__contact fadeIn">
+                    <div class="insta__arrow">
+                        <span class="insta__arrow-line"></span>
+                        <p class="insta__arrow-text">Synergy Salon</p>
+                        <p class="insta__arrow-text">Instagram</p>
+                    </div>
+                    <div class="insta__img">
+                        <a href="https://www.instagram.com/insta_sample_account/?hl=ja" target="_blank" rel="noopener noreferrer" class="insta__img-link">
+                            <img src="./assets/img/pc/instagram-color.png" alt="インスタグラム">
+                        </a>
+                    </div>
+                </div>
+                <ul class="insta__items">
+                    <li class="insta__item">
+                        <a href="https://www.instagram.com/p/CMhck9TFS6S/" target="_blank" rel="noopener noreferrer" class="insta__item-link">
+                            <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/160997257_1430377617298663_1949885012524291989_n.jpg?tp=1&_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_cat=107&_nc_ohc=Xr5v3wPLT5wAX9ZraTa&ccb=7-4&oh=3d933a21ab3d1a01f4020150080f8be2&oe=607F173D&_nc_sid=5eceaa" alt="女性カットのインスタグラム投稿" class="fadeIn">
+                        </a>
+                    </li>
+                    <li class="insta__item">
+                        <a href="https://www.instagram.com/p/CMhcfVglZv7/" target="_blank" rel="noopener noreferrer" class="insta__item-link">
+                            <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/160647594_195959058966651_2995953153923778580_n.jpg?tp=1&_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=nCJqwwbcLm4AX_7HMWv&ccb=7-4&oh=c2567b0efb2f2c51e1ca01b1e8b2de6b&oe=607F7C44&_nc_sid=5eceaa" alt="店内空間のインスタグラム投稿" class="fadeIn">
+                        </a>
+                    </li>
+                    <li class="insta__item">
+                        <a href="https://www.instagram.com/p/CMhcinYli9V/" target="_blank" rel="noopener noreferrer" class="insta__item-link">
+                            <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/161001235_150581056931896_8161361598720080405_n.jpg?tp=1&_nc_ht=scontent-nrt1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=fNjK4kRDBK4AX8TJv84&ccb=7-4&oh=29db170a3682c41af6d654ddca30f566&oe=6080F502&_nc_sid=5eceaa" alt="入り口ドアのインスタグラム投稿" class="fadeIn">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //ここまでインスタグラム -->
+
+        <!-- 店舗情報 -->
+        <section class="info inner" id="info">
+            <h2 class="sectionTitle fadeIn"><span class="sectionTitle-box right">店舗案内</span></h2>
+            <div class="info__wrapper">
+                <div class="info__container">
+                    <div class="info__map fadeIn">
+                        <div class="info__map-img">
+                            <img src="./assets/img/pc/map.jpg" alt="シナジーサロンへの案内図">
+                        </div>
+                        <div class="info__map-container">
+                            <p class="info__map-access">地下鉄半蔵門線「半蔵門駅」徒歩3分</p>
+                            <p class="p info__map-text">2番出口を出て直進。最初の交差点の左向かい側。</p>
+                        </div>
+                    </div>
+                    <div class="info__shop fadeIn">
+                        <h3 class="info__shop-name">Synergy Salon<span>シナジーサロン</span> </h3>
+                        <dl class="info__shop-items">
+                            <div class="info__shop-item">
+                                <dt class="info__shop-title">
+                                    <h4>住所</h4>
+                                </dt>
+                                <dd class="info__shop-text"><span>〒100-8111</span>東京都千代田区千代田1-1</dd>
+                            </div>
+                            <div class="info__shop-item">
+                                <dt class="info__shop-title">
+                                    <h4>電話</h4>
+                                </dt>
+                                <dd class="info__shop-text">012-345-6789</dd>
+                            </div>
+                            <div class="info__shop-item">
+                                <dt class="info__shop-title">
+                                    <h4>営業時間</h4>
+                                </dt>
+                                <dd class="info__shop-text">9:30～18:30 (最終受付18:30)</dd>
+                            </div>
+                            <div class="info__shop-item">
+                                <dt class="info__shop-title">
+                                    <h4>定休日</h4>
+                                </dt>
+                                <dd class="info__shop-text">月曜日 (不定休あり)</dd>
+                            </div>
+                            <div class="info__shop-item">
+                                <dt class="info__shop-title">
+                                    <h4>駐車場</h4>
+                                </dt>
+                                <dd class="info__shop-text">あり (1台)</dd>
+                            </div>
+                            <div class="info__shop-item">
+                                <dt class="info__shop-title">
+                                    <h4>お支払い方法</h4>
+                                </dt>
+                                <dd class="info__shop-text">
+                                    <ul class="info__payment-items">
+                                        <li class="info__payment-item">
+                                            <dl class="info__payment-way">
+                                                <dt class="info__payment-title">現金</dt>
+                                                <dd class="info__payment-text"></dd>
+                                            </dl>
+                                        </li>
+                                        <li class="info__payment-item">
+                                            <dl class="info__payment-way">
+                                                <dt class="info__payment-title">クレジットカード</dt>
+                                                <dd class="info__payment-text">VISA / Mastercard / JCB / American&nbsp;Express / Diners&nbsp;Club / Discover&nbsp;Card</dd>
+                                            </dl>
+                                        </li>
+                                        <li class="info__payment-item">
+                                            <dl class="info__payment-way">
+                                                <dt class="info__payment-title">電子マネー他</dt>
+                                                <dd class="info__payment-text">R&nbsp;Pay / Rakuten&nbsp;Card / 楽天Edy / nanaco / WAON / 交通系IC / QUIC&nbsp;Pay / iD</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="info__iframe fadeIn">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7265344322686!2d139.74345131525894!3d35.68373498019368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c7116eab8ad%3A0xc57fcf864ba7dda6!2z44CSMTAwLTAwMDEg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65Y2D5Luj55Sw77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1616419151584!5m2!1sja!2sjp" 
+                        width="860" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="sectionSubTitle right fadeIn-under">SHOP INFO</div>
+        </section>
+        <!-- //ここまで店舗挨拶 -->
+
+        <!-- 予約 -->
+        <section class="reserve" id="reserve">
+            <div class="reserve__wrapper inner">
+                <h2 class="sectionTitle shadow reserve__title fadeIn"><span class="sectionTitle-box left white">ご予約はこちら</span></h2>
+                <p class="reserve__text fadeIn">お電話、LINE、ホットペッパービューティーにて承ります。</p>
+                <div class="reserve__container fadeIn">
+                    <address class="reserve__tel">
+                        <a class="reserve__tel-link" href="tel:012-345-6789"><span><i class="fas fa-phone-alt"></i></span>012-345-6789</a>
+                    </address>
+                    <ul class="reserve__items">
+                        <li class="reserve__item">
+                            <a href="" target="_blank" rel="noopener noreferrer" class="reserve__item-link">
+                                <img src="./assets/img/pc/line-login.png" alt="">
+                            </a>
+                        </li>
+                        <li class="reserve__item">
+                            <a href="https://beauty.hotpepper.jp/" target="_blank" rel="noopener noreferrer" class="reserve__item-link">
+                                <img src="./assets/img/pc/hotpepper-icon.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sectionSubTitle left white fadeIn-under">RESERVE</div>
+            </div>
+        </section>
+        <!-- //ここまで予約 -->
+
+        <!-- お問い合わせ -->
+        <section class="contact inner" id="contact">
+            <h2 class="sectionTitle fadeIn"><span class="sectionTitle-box right">お問い合わせ</span></h2>
+            <div class="contact__wrapper">
+                <div class="contact__textBox fadeIn">
+                    <p class="contact__notice">※ お問い合わせフォームからのご予約はできません。</p>
+                    <a href="#reserve" class="contact__link">＞ ご予約はこちら</a>
+                </div>
+    
+                <form id="js-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW35Df7_WXJVyMxPJ3NgEgzO0V1TsaOnXw6C2qcUtK7_3FrA/formResponse" method="post" class="fadeIn">
+                    <div class="contact__items">
+                        <div class="contact__item">
+                            <label for="name" class="contact__label"><span class="required">お名前</span></label>
+                            <input id="name" type="text" name="entry.850211798" class="contact__name" required>
+                        </div>
+                        <div class="contact__item">
+                            <label for="ruby" class="contact__label"><span class="required">フリガナ</span></label>
+                            <input id="ruby" type="text" name="entry.43872417" class="contact__name">
+                        </div>
+                        <div class="contact__item">
+                            <label for="email" class="contact__label"><span class="required">メールアドレス</span></label>
+                            <input id="email" type="email" name="entry.1079295882" class="contact__mail" required>
+                        </div>
+                        <div class="contact__item">
+                            <label for="tel" class="contact__label"><span class="optional">電話番号</span></label>
+                            <input id="tel" type="tel" name="entry.1030601264" pattern="[\d\-]*" class="contact__phone">
+                        </div>
+                        <div class="contact__item">
+                            <label for="textarea" class="contact__label"><span class="required">お問い合わせ内容</span></label>
+                            <textarea id="textarea" name="entry.1692141827" class="contact__textarea" required></textarea>
+                        </div>
+                        <div class="contact__footer">
+                            <p class="contact__footer-privacy">
+                                <input id="agree" type="checkbox" name="entry.1613341432" class="contact__footer-checkbox" value="プライバシーポリシーの同意" required>
+                                <label class="contact__footer-agree" for="agree"></label>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="contact__footer-link" id="js-contact__footer-link">プライバシーポリシー</a>に同意します。        
+                            </p>
+                            <div class="contact__footer-btn">
+                                <button type="submit" id="js-submit" class="contact__footer-submit">送信</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- モーダル｜プライバシーポリシー -->
+            <div class="modal-privacy" id="js-modal-privacy">
+                <div class="modal-privacy__overlay" id="js-modal-privacy__overlay"></div>
+                <section class="modal-privacy__wrapper">
+                    <div class="modal-privacy__container">
+                        <h2 class="modal-privacy__title">プライバシーポリシー</h2>
+                        <div class="modal-privacy__items">
+                            <p class="modal-privacy__intro">シナジーサロン（以下、当サロン）では、当サロンが取得したお客様の個人情報に関して、個人情報の保護に関する法律、個人情報保護に関するガイドライン等の指針、その他個人情報保護に関する関係法令を遵守し、お客様の大切な個人情報の保護に万全を尽くします。</p>
+                            <div class="modal-privacy__item">
+                                <h3 class="modal-privacy__subtitle">第1条（個人情報の収集について）</h3>
+                                <p class="modal-privacy__text">当サロンでは、適法かつ公正な手段によって以下の情報を保護措置を講じた上で収集いたします。</p>
+                                <ul class="modal-privacy__lists">
+                                    <li class="modal-privacy__list">1. ご来店の際のカウンセリングシートのご記入内容</li>
+                                    <li class="modal-privacy__list">2. メールでお問い合わせの際のお名前、メールアドレス等</li>
+                                </ul>
+                            </div>
+                            <div class="modal-privacy__item">
+                                <h3 class="modal-privacy__subtitle">第2条（個人情報の利用目的について）</h3>
+                                <p class="modal-privacy__text">当サロンでは、個人情報をあらかじめお客様ご本人の同意を得た場合および法令により例外として認められた場合を除き以下の目的で利用いたします。</p>
+                                <ul class="modal-privacy__lists">
+                                    <li class="modal-privacy__list">1. ご質問などのお問い合わせにお答えする際にご連絡するため</li>
+                                    <li class="modal-privacy__list">2. サロン、キャンペーン、イベント等に関するご案内情報の提供のため</li>
+                                    <li class="modal-privacy__list">3. 何らかの理由によりお客様にご連絡をとる必要が生じたときのため</li>
+                                </ul>
+                            </div>
+                            <div class="modal-privacy__item">
+                                <h3 class="modal-privacy__subtitle">第3条（個人情報の提供について）</h3>
+                                <p class="modal-privacy__text">当サロンは、以下の場合を除き個人情報を第三者に開示または提供いたしません。</p>
+                                <ul class="modal-privacy__lists">
+                                    <li class="modal-privacy__list">1. 法令等に基づく場合</li>
+                                    <li class="modal-privacy__list">2. あらかじめ同意または承諾をいただいている場合</li>
+                                    <li class="modal-privacy__list">3. 人の生命、身体または財産の保護のために必要で、本人の同意を得ることが困難である場合</li>
+                                    <li class="modal-privacy__list">4. 個人情報の請求者が代理人の場合、ご本人様からの依頼による代理人と確認できた場合</li>
+                                </ul>
+                            </div>
+                            <div class="modal-privacy__item">
+                                <h3 class="modal-privacy__subtitle">第4条（個人情報の利用・提供中止について）</h3>
+                                <p class="modal-privacy__text">当サロンでは、お客様ご本人から個人情報の利用や当サロンからの情報提供について中止お申し出があった場合は、遅延なくそれ以降の当該目的でのお客様の個人情報の利用や情報提供を中止する措置をとります。同様に、再開希望のお申し出をいただいたときは、それ以降の当該目的での利用・提供を再開いたします。</p>
+                            </div>
+                            <div class="modal-privacy__item">
+                                <h3 class="modal-privacy__subtitle">第5条（個人情報の訂正・追加について）</h3>
+                                <p class="modal-privacy__text">当サロンでは、お客様が自己の個人情報について、訂正・追加・消去等を求める要求がある場合には、本人確認の上、適切に対処いたします。</p>
+                            </div>
+                            <div class="modal-privacy__item">
+                                <h3 class="modal-privacy__subtitle">第6条（お問い合わせ窓口について）</h3>
+                                <p class="modal-privacy__text">当サロンの個人情報の取り扱いに関するお問い合わせは下記までご連絡ください。</p>
+                                <ul class="modal-privacy__lists">
+                                    <li class="modal-privacy__list">事業者の名称：Synergy Salon（シナジーサロン）</li>
+                                    <li class="modal-privacy__list">事業者の連絡先：012-345-6789</li>
+                                    <li class="modal-privacy__list">代表者：支那寺 太郎</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="modal-privacy__btn" id="js-modal-privacy__btn">閉じる</button>
+                    </div>
+                </section>
+            </div>
+            <!-- //ここまでモーダル｜プライバシーポリシー -->
+
+            <div class="message">
+                <div id="js-success" class="message__text">
+                    <p>送信完了しました。<br class="hidden-lg">お問い合わせありがとうございました。<br>登録メールアドレスに確認メールが<br class="hidden-lg">届きますのでご確認ください。</p>
+                </div>
+                <div id="js-error" class="message__text error">
+                    <p>送信に失敗しました。<br class="hidden-lg">ページを更新していただき、再度送信してください。</p>
+                </div>
+            </div>
+            <div class="sectionSubTitle right fadeIn-under">CONTACT</div>
+        </section>
+        <!-- //ここまでお問い合わせ -->
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__container">
+                <!-- ロゴ部分 -->
+                <div class="footer__logo">
+                    <img src="./assets/img/pc/logo.png" alt="シナジーサロン">
+                </div>
+                <p class="footer__address">〒100-8111 東京都千代田区千代田1-2</p>
+                <p class="footer__phone"><a href="tel:012-345-6789" class="footer__phone-link">012-345-6789</a></p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright" lane="en"><small>©Synergy Salon</small></p>
+        </div>
+    </footer>
+    <!-- //ここまでフッター -->
+
+    <!-- swiper -->
+    <script src="./assets/js/swiper-bundle.min.js" defer></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+</body>
+
+</html>
