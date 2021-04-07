@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+$font-family-serif: 
+"游明朝体",
+"Yu Mincho",
+YuMincho,
+"ヒラギノ明朝 Pro",
+"Hiragino Mincho Pro",
+"MS P明朝",
+"MS PMincho",
+serif;
+
+$font-family-sansSerif: 
+"游ゴシック体",
+"Yu Gothic",
+YuGothic,
+"ヒラギノ角ゴ Pro",
+"Hiragino Kaku Gothic Pro",
+"メイリオ",
+Meiryo,
+"MS Pゴシック",
+"MS PGothic",
+sans-serif;
+
+$font-family-ja:
+'Noto Sans JP', 
+sans-serif;
+
+$font-family-sectionSubTitle:
+'Roboto', 
+sans-serif;
+
+$font-family-point:
+'Courgette', 
+cursive;

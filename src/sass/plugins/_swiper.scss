@@ -1,0 +1,32 @@
+/* -------------------------
+Swiper
+------------------------- */
+.swiper-container {
+    width: 100vw;
+    height: 100vh;
+    
+    @include mq('lg') {
+        height: calc(100vh - #{$header-height-pc});
+    }
+    
+    .swiper-slide.slide1 {
+        background: transparent url(../../../public/assets/img/pc/top-bg1.jpg) no-repeat bottom center / cover ;
+    }
+
+    .swiper-slide.slide2 {
+        background: transparent url(../../../public/assets/img/pc/top-bg2.jpg) no-repeat top center / cover ;
+    }
+
+    // ページネーション調整
+    // .swiper-pagination-bullet {
+    //     width: 12px;
+    //     height: 12px;
+    //     background: white;
+    //     outline: none;
+    //     transform: translateY(-3.5vh);
+    // }
+
+    // .swiper-pagination-bullets .swiper-pagination-bullet {
+    //     margin: 0 6px;
+    // }
+}

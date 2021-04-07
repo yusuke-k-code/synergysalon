@@ -1,0 +1,47 @@
+// ベース色
+$color-main: #666666;
+$color-primary: #8BC889;
+$color-primary-opacity: rgba(139, 200, 137, .3);
+$color-gray: #B1B1B1;
+$color-gray-opacity: rgba(177, 177, 177, .3);
+
+// 背景色
+$color-bg: #FFF;
+$color-bg-header: $color-gray;
+$color-bg-footer: $color-gray;
+$color-bg-drawer: #3EA1D1;
+$color-bg-overlay: rgba(0, 0, 0, .6);
+
+// テキスト色
+$color-text-black: $color-main;
+$color-text-white: rgb(254, 254, 254);
+$color-text-primary: $color-primary;
+$color-text-menu: #615F5F;
+$color-text-title: #608F8D;
+
+// レイアウト幅
+$layout-inner-width: 1000px;
+$header-height-pc: 70px;
+$header-height-sp: 60px;
+
+$section-top: 140px;
+$sectionTitle-bottom: 80px;
+
+// ブレークポイント
+$breakpoints: (
+    sm: 'screen and (max-width: 559px)',
+    md: 'screen and (min-width: 560px)', //TAB想定 560〜959px（〜559pxがSP想定）
+    lg: 'screen and (min-width: 960px)', //PC想定 960〜コンテンツ幅−1px
+    xl: 'screen and (min-width: #{$layout-inner-width})', //PC想定 コンテンツ幅以上
+);
+
+// 階層
+$layer: (
+    modal: 50, //モーダル
+    drawer-btn: 35, //ドロワーボタン
+    drawer-menu: 30, //ドロワーメニュー
+    drawer-overlay: 25, //ドロワーメニュー背景のオーバーレイ
+    header: 20, // ヘッダー
+    footer: 10, // フッター
+    default: 1,
+);

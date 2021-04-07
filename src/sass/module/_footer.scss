@@ -1,0 +1,70 @@
+/* -------------------------
+フッター
+------------------------- */
+.footer {
+    margin-top: $section-top;
+
+    &__top {
+        background: transparent url(../../../public/assets/img/pc/footer-bg.jpg) no-repeat center top / cover;
+        position: relative;
+        height: 340px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            outline: solid 6px rgba(255, 255, 255, .6);
+            outline-offset: -23px;
+            
+            @include mq('lg') {
+                outline: solid 8px rgba(255, 255, 255, .6);
+                outline-offset: -25px;
+            }
+        }
+    }
+
+    &__container {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: rem(14);
+        color: $color-text-white;
+        text-shadow: 0 0 4px rgba(43, 43, 43, .8);
+    }
+
+    &__logo {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    &__address {
+        margin-top: 10px;
+    }
+
+    &__phone {
+        &-link {
+            text-decoration: none;
+            color: $color-text-white;
+        }
+    }
+    
+    &__bottom {
+        height: 60px;
+        background-color: $color-bg-footer;
+        @include z-index("footer");
+    }
+
+    &__copyright {
+        line-height: 60px;
+        text-align: center;
+        font-family: $font-family-point;
+        font-size: rem(17);
+        color: $color-text-white;
+    }
+}

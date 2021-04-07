@@ -1,0 +1,344 @@
+/* -------------------------
+ヘッダー
+------------------------- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100vw;
+    height: $header-height-sp;
+    @include z-index("header");
+    
+    @include mq("lg") {
+        position: sticky;
+        background-color: $color-bg-header;
+        height: $header-height-pc;
+    }
+    
+    &__inner {
+        max-width: $layout-inner-width;
+        height: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // &__logo {
+    //     width: 65px;
+    //     position: relative;
+        
+    //     &-link {
+    //         display: block;
+    //         transition: opacity .4s ease-out 0s;
+
+    //         &:hover {
+    //             opacity: .7;
+    //         }
+    //     }
+        
+    //     img {
+    //         position: absolute;
+    //         top: 50%;
+    //         transform: translateY(-50%);
+    //     }
+    // }
+
+    /* ナビゲーション */
+    &__nav {
+        display: none;
+
+        @include mq("lg") {
+            display: block;
+        }
+
+        &-lists {
+            display: flex;
+            justify-content: center; 
+        }
+    
+        &-list {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: 40px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: calc(100% + 20px);
+                    width: 1px;
+                    height: 24px;
+                    background-color: $color-bg;
+                    opacity: .6;
+                }
+            }
+        }
+    
+        &-link {
+            position: relative;
+            display: block;
+            padding-bottom: 16px;
+            font-size: rem(16);
+            color: $color-text-white;
+            transition: opacity .4s ease-out 0s;
+
+            span {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: $font-family-sectionSubTitle;
+                font-size: rem(12);
+                color: $color-text-white;
+                opacity: .6;
+            }
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+
+    &__info {
+        color: $color-text-white;
+
+        &-tel {
+            display: inline-block;
+            font-size: rem(22);
+            font-family: $font-family-point;
+            line-height: 1;
+            text-align: left;
+
+            span {
+                margin-right: 14px;
+            }
+        }
+        
+        &-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        &-covid {
+            font-size: rem(14);
+            line-height: 1;
+            position: relative;
+            transition: opacity .4s ease-out 0s;
+            cursor: pointer;
+
+            &::before {
+                position: absolute;
+                content: "▼";
+                top: 50%;
+                left: calc(100% + 6px);
+                transform: translateY(-50%);
+                font-size: rem(12);
+            }
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+
+        &-instagram {
+            line-height: 1;
+            margin-left: auto;
+        }
+        
+        &-link {
+            display: block;
+            color: $color-text-white;
+            transition: opacity .4s ease-out 0s;
+    
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+}
+
+/* -------------------------
+SP時のドロワーメニュー
+------------------------- */
+.drawer__btn {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: auto;
+    bottom: auto;
+    right: 3vw;
+    @include z-index("drawer-btn");
+    display: block;
+    
+    @include mq("lg") {
+        display: none;
+    }
+
+    &-bar {
+        width: 80%;
+        height: 4px;
+        border-radius: 999px;
+        background-color: $color-bg;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all .4s ease 0s;
+
+        &:nth-child(2) {
+            top: 55%;
+        }
+
+        &:nth-child(3) {
+            top: -55%;
+        }
+    }
+
+    &.open {
+        & .drawer__btn-bar {
+            &:nth-child(1) {
+                transform: translateX(30px);
+                opacity: 0;
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(3) {
+                top: 0;
+                transform: rotate(225deg);
+            }
+        }
+    }
+}
+
+.drawer__overlay {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(51, 51, 51, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include z-index("drawer-overlay");
+    display: none;
+    opacity: 0;
+    transition: all .5s ease 0s;
+
+    &.open {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.drawer {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: $color-bg-drawer;
+    @include z-index("drawer-menu");
+    overflow-y: auto;
+    display: none;
+    transition: all .4s ease 0s;
+
+    @include mq("sp") {
+        display: block;
+    }
+
+    &__lists {
+        text-align: center;
+        margin: 120px auto 0;
+    }
+
+    &__list {
+        padding: 15px;
+        font-size: rem(16);
+        letter-spacing: .5rem;
+    }
+
+    &__link {
+        padding-left: 10px;
+        transition: all .4s ease 0s;
+        color: $color-text-white;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &.open {
+        right: 0;
+    }
+}
+
+/* -------------------------
+モダール｜感染症対策について
+------------------------- */
+.modal-covid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    @include z-index("modal");
+    display: none;
+    
+    &__overlay {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;   
+        background-color: $color-bg-overlay;
+    }
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-bg;
+        padding: 60px;
+        width: 80%;
+        max-height: 70vh;
+        overflow-y: scroll;
+    }
+
+    .sectionTitle {
+        letter-spacing: kerning(80);
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        margin-top: $sectionTitle-bottom;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 2%;
+        }
+    }
+
+    &__btn {
+        @include _btnHover;
+        display: block;
+        margin: 60px auto 0;
+    }
+    
+    &.is-open {
+        display: block;
+    }
+}

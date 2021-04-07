@@ -1,0 +1,243 @@
+/* -------------------------
+BASE（共通）
+------------------------- */
+body {
+    font-size: rem(16);
+    letter-spacing: normal;
+    line-height: leading(30, 16);
+    color: $color-text-black;
+    font-family: $font-family-ja;
+}
+
+@include mq('lg') {
+    a[href^="tel:"] {
+        pointer-events: none;
+    }
+}
+
+/* コンテンツインナー幅設定 */
+.inner {
+    max-width: $layout-inner-width;
+    margin: 0 auto;
+}
+
+/* sectionTitle設定 */
+.sectionTitle {
+    margin: 0 auto;
+    font-family: $font-family-ja;
+    font-weight: 400;
+    font-size: rem(30);
+    line-height: leading(40, 30);
+    color: $color-text-title;
+    text-align: center;
+    margin-top: 20px;
+
+    &-box {
+        position: relative;
+
+        &::before, &::after {
+            position: absolute;
+            content: "";
+        }
+        
+        &.right, 
+        &.left {
+            &::before {
+                width: 40px;
+                height: 40px;
+                background-color: $color-primary-opacity;
+                z-index: -1;
+            }
+    
+            &::after {
+                width: 30px;
+                height: 30px;
+                background-color: $color-gray-opacity;
+                z-index: -2;
+            }
+        }
+    
+        &.right {
+            &::before {
+                top: -18px;
+                right: -25px;
+            }
+    
+            &::after {
+                top: 10px;
+                right: -43px;
+            }
+        }
+    
+        &.left {
+            &::before {
+                top: -18px;
+                left: -25px;
+            }
+    
+            &::after {
+                top: 10px;
+                left: -43px;
+            }
+        }
+    
+        &.white {        
+            &::after {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+
+    &.shadow {        
+        text-shadow: 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239),;
+    }
+}
+
+/* sectionSubTitle設定 */
+.sectionSubTitle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: $font-family-sectionSubTitle;
+    font-size: rem(72);
+    line-height: .8em;
+    letter-spacing: kerning(70);
+    writing-mode: vertical-rl;
+    color: $color-primary-opacity;
+    
+    &.white {
+        color: $color-text-white;
+        opacity: .9;
+        text-shadow: 0 0 9px $color-gray;
+    }
+
+    &.left {
+        left: 0;
+        right: auto;
+    }
+
+    &.right {
+        left: auto;
+        right: 0;
+    }
+}
+
+/* -------------------------
+必須・任意タグ
+------------------------- */
+.required,
+.optional {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        transform: translateY(-50%);
+        line-height: 1;
+        font-size: rem(10);
+        font-weight: bold;
+        padding: 4px;
+        border-radius: 5px;
+    }
+}
+
+.required {
+    &::before {
+        content: "必須";
+        color: $color-text-white;
+        background-color: $color-primary;
+    }
+}
+
+.optional {
+    &::before {
+        content: "任意";
+        color: $color-text-primary;
+        background-color: $color-text-white;
+        border: 1px solid $color-primary;
+    }
+}
+
+/* -------------------------
+フェードイン
+------------------------- */
+.fadeIn {
+    opacity: 0;
+    transition: opacity 2.5s ease 0s;
+
+    &.is-active {
+        opacity: 1;
+    }
+}
+
+.fadeIn-under {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+
+    &.is-active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeIn-top {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+
+    &.is-active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeIn-right {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+
+    &.is-active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fadeIn-left {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+
+    &.is-active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* -------------------------
+補完クラス
+------------------------- */
+/* lg（PC想定）サイズ以上で非表示 */
+.hidden-lg {
+    @include mq('lg') {
+        display: none;
+    }
+}
+
+/* md（TAB想定）サイズ以上で非表示 */
+.hidden-md {
+    @include mq('md') {
+        display: none;
+    }
+}
+
+/* sm（SP想定）だけで非表示 */
+.hidden-sm {
+    @include mq('sm') {
+        display: none;
+    }
+}
