@@ -142,16 +142,16 @@ $('#js-form input, #js-form textarea').on('change', function () {
 TOPのフローティング
 ------------------------- */
 $(function () {
-    $('#js-toTop').hide();
+    $('#js-floating-toTop, #js-floating-reserve').hide();
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 400) {
-            $('#js-toTop').fadeIn();
+            $('#js-floating-toTop, #js-floating-reserve').fadeIn();
         } else {
-            $('#js-toTop').fadeOut();
+            $('#js-floating-toTop, #js-floating-reserve').fadeOut();
         }
     });
 
-    $('#js-toTop').on('click', function () {
+    $('#js-floating-toTop').on('click', function () {
         $('body, html').animate({scrollTop: 0}, 500);
     });
     return false;

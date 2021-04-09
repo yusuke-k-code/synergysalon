@@ -1,5 +1,4 @@
-/* 共通ボタン */
-
+// 共通ボタン
 // ボタンレイアウトのみ
 @mixin _btn {
     text-decoration: none;
@@ -42,6 +41,119 @@
         &::before {
             transform: scaleX(1);
             transform-origin: left;
+        }
+    }
+}
+
+// フローティングボタン
+.floating-btn {
+    position: fixed;
+    right: 0;
+    width: 82px;
+    height: 74px;
+    transform: translateX(8px);
+    transition: transform .4s ease-out 0s;
+    @include z-index("floating");
+
+    a {
+        display: block;
+        height: 100%;
+    }
+
+    &.toTop {
+        top: 30%;
+        background-color: $color-primary;
+
+        a {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 38px;
+                left: 24px;
+                width: 30px;
+                height: 6px;
+                border-top: 1px solid $color-text-white;
+                border-right: 2px solid $color-text-white;
+                transform: rotate(-90deg) skew(120deg);
+            }
+
+            &::after {
+                content: "PAGE TOP";
+                position: absolute;
+                top: -18px;
+                left: 0;
+                font-family: $font-family-sectionSubTitle;
+                font-size: rem(12);
+                letter-spacing: kerning(50);
+                white-space: nowrap;
+                color: $color-text-primary;
+                opacity: 0;
+                transition: opacity .4s ease-out .2s;
+            } 
+        }
+
+        &:hover {
+            transform: translateX(0);
+    
+            a::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.toReserve {
+        top: calc(30% + 94px);
+        background-color: $color-text-title;
+
+        a {
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            color: $color-text-white;
+            font-family: $font-family-ja;
+            font-size: rem(12);
+            font-weight: 300;
+            padding: 19px 9px 19px 0;
+            line-height: 1.5em;
+            letter-spacing: kerning(50);
+            
+            &::after {
+                content: "RESERVE";
+                position: absolute;
+                top: -16px;
+                left: 0;
+                font-family: $font-family-sectionSubTitle;
+                font-size: rem(12);
+                letter-spacing: kerning(50);
+                white-space: nowrap;
+                color: $color-text-title;
+                opacity: 0;
+                transition: opacity .4s ease-out .2s;
+            }
+        }
+        
+        &:hover {
+            transform: translateX(0);
+    
+            a::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    /* Firefox対応｜position調整 */
+    @-moz-document url-prefix(){
+        a {
+            &::before {
+                top: 45px;
+            }
+    
+            &::after {
+                top: -5px;
+                left: 5px;
+            }        
         }
     }
 }
