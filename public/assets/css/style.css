@@ -1263,7 +1263,7 @@ SP時のドロワーメニュー
 }
 
 .stylist__career {
-  width: 70%;
+  width: 74%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1286,6 +1286,10 @@ SP時のドロワーメニュー
   padding-left: 16px;
 }
 
+.stylist__career-year:not(:first-child) {
+  margin-top: 4px;
+}
+
 .stylist__career-year::before {
   content: "";
   position: absolute;
@@ -1296,6 +1300,11 @@ SP時のドロワーメニュー
   width: 12px;
   height: 12px;
   background-color: #608F8D;
+}
+
+.stylist__career-biography {
+  padding-left: 16px;
+  line-height: 1.5em;
 }
 
 .stylist__greeting {

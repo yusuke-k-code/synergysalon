@@ -364,7 +364,7 @@
     }
     
     &__career {
-        width: 70%;
+        width: 74%;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -386,6 +386,10 @@
         &-year {
             position: relative;
             padding-left: 16px;
+            
+            &:not(:first-child) {
+                margin-top: 4px;
+            }
 
             &::before {
                 content: "";
@@ -397,6 +401,11 @@
                 height: 12px;
                 background-color: $color-text-title;
             }
+        }
+
+        &-biography {
+            padding-left: 16px;
+            line-height: 1.5em;
         }
     }
 
