@@ -23,7 +23,7 @@
 }
 
 .floating-btn.toTop {
-  top: 30%;
+  top: 20%;
   background-color: #8BC889;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .floating-btn.toReserve {
-  top: calc(30% + 94px);
+  top: calc(20% + 94px);
   background-color: #608F8D;
 }
 
