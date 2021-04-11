@@ -61,7 +61,7 @@
     }
 
     &.toTop {
-        top: 20%;
+        bottom: 514px;
         background-color: $color-primary;
 
         a {
@@ -104,7 +104,7 @@
     }
 
     &.toReserve {
-        top: calc(20% + 94px);
+        bottom: 420px;
         background-color: $color-text-title;
 
         a {
@@ -140,20 +140,6 @@
             a::after {
                 opacity: 1;
             }
-        }
-    }
-
-    /* Firefox対応｜position調整 */
-    @-moz-document url-prefix(){
-        a {
-            &::before {
-                top: 45px;
-            }
-    
-            &::after {
-                top: -5px;
-                left: 5px;
-            }        
         }
     }
 }

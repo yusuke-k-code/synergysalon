@@ -773,7 +773,7 @@
         }
         
         &:nth-child(2) {
-            border-radius: 12px;
+            border-radius: 15px;
             min-width: 250px;
             background-color: $color-bg;
             
@@ -819,6 +819,7 @@
         &-link {
             display: block;
             transition: opacity .4s ease-out 0s;
+            -webkit-transform-style: preserve-3d; //transformとopacity併用によるsafariの不具合対応
 
             &:hover {
                 opacity: .7;
@@ -1003,6 +1004,43 @@
                 display: none;
             }
         }
+    }
+}
+
+/* -------------------------
+必須・任意タグ
+------------------------- */
+.required,
+.optional {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        transform: translateY(-50%);
+        line-height: 1;
+        font-size: rem(10);
+        font-weight: bold;
+        padding: 4px;
+        border-radius: 5px;
+    }
+}
+
+.required {
+    &::before {
+        content: "必須";
+        color: $color-text-white;
+        background-color: $color-primary;
+    }
+}
+
+.optional {
+    &::before {
+        content: "任意";
+        color: $color-text-primary;
+        background-color: $color-text-white;
+        border: 1px solid $color-primary;
     }
 }
 

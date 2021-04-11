@@ -31,6 +31,8 @@ body {
     color: $color-text-title;
     text-align: center;
     margin-top: 20px;
+    z-index: 1;
+    position: relative;
 
     &-box {
         position: relative;
@@ -122,43 +124,6 @@ body {
     &.right {
         left: auto;
         right: 0;
-    }
-}
-
-/* -------------------------
-必須・任意タグ
-------------------------- */
-.required,
-.optional {
-    position: relative;
-
-    &::before {
-        position: absolute;
-        top: 50%;
-        left: -40px;
-        transform: translateY(-50%);
-        line-height: 1;
-        font-size: rem(10);
-        font-weight: bold;
-        padding: 4px;
-        border-radius: 5px;
-    }
-}
-
-.required {
-    &::before {
-        content: "必須";
-        color: $color-text-white;
-        background-color: $color-primary;
-    }
-}
-
-.optional {
-    &::before {
-        content: "任意";
-        color: $color-text-primary;
-        background-color: $color-text-white;
-        border: 1px solid $color-primary;
     }
 }
 
