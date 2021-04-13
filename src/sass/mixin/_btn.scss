@@ -8,6 +8,7 @@
     font-family: $font-family-ja;
     font-weight: bold;
     width: 250px;
+    max-width: 100%;
     height: 50px;
     border-radius: 5px;
     border: 1px solid $color-primary;
@@ -49,11 +50,16 @@
 .floating-btn {
     position: fixed;
     right: 0;
-    width: 82px;
-    height: 74px;
-    transform: translateX(8px);
-    transition: transform .4s ease-out 0s;
+    width: 52px;
+    height: 52px;
     @include z-index("floating");
+    
+    @include mq('md') {
+        width: 82px;
+        height: 74px;
+        transform: translateX(8px);
+        transition: transform .3s ease-out 0s;
+    }
 
     a {
         display: block;
@@ -61,8 +67,12 @@
     }
 
     &.toTop {
-        bottom: 514px;
+        bottom: 130px;
         background-color: $color-primary;
+
+        @include mq('md') {
+            bottom: 514px;
+        }
 
         a {
             position: relative;
@@ -70,42 +80,61 @@
             &::before {
                 content: "";
                 position: absolute;
-                top: 38px;
-                left: 24px;
-                width: 30px;
-                height: 6px;
+                top: 27px;
+                left: 17px;
+                width: 24px;
+                height: 5px;
                 border-top: 1px solid $color-text-white;
                 border-right: 2px solid $color-text-white;
                 transform: rotate(-90deg) skew(120deg);
+                
+                @include mq('md') {
+                    top: 38px;
+                    left: 24px;
+                    width: 30px;
+                    height: 6px;
+                }
             }
 
             &::after {
                 content: "PAGE TOP";
                 position: absolute;
-                top: -18px;
+                top: -14px;
                 left: 0;
                 font-family: $font-family-sectionSubTitle;
-                font-size: rem(12);
-                letter-spacing: kerning(50);
+                font-size: rem(10);
+                letter-spacing: kerning(30);
                 white-space: nowrap;
                 color: $color-text-primary;
-                opacity: 0;
-                transition: opacity .4s ease-out .2s;
+                
+                @include mq('md') {
+                    top: -18px;
+                    font-size: rem(12);
+                    letter-spacing: kerning(50);
+                    opacity: 0;
+                    transition: opacity .3s ease-out .2s;
+                }
             } 
         }
 
-        &:hover {
-            transform: translateX(0);
-    
-            a::after {
-                opacity: 1;
+        @include mq('md') {
+            &:hover {
+                transform: translateX(0);
+        
+                a::after {
+                    opacity: 1;
+                }
             }
         }
     }
 
     &.toReserve {
-        bottom: 420px;
+        bottom: 60px;
         background-color: $color-text-title;
+        
+        @include mq('md') {
+            bottom: 420px;
+        }
 
         a {
             position: relative;
@@ -113,32 +142,46 @@
             text-align: center;
             color: $color-text-white;
             font-family: $font-family-ja;
-            font-size: rem(12);
+            font-size: rem(10);
             font-weight: 300;
-            padding: 19px 9px 19px 0;
+            padding: 11px 6px 0 0;
             line-height: 1.5em;
-            letter-spacing: kerning(50);
+            letter-spacing: kerning(30);
+            
+            @include mq('md') {
+                font-size: rem(12);
+                padding: 19px 9px 19px 0;
+                letter-spacing: kerning(50);
+            }
             
             &::after {
                 content: "RESERVE";
                 position: absolute;
-                top: -16px;
+                top: -13px;
                 left: 0;
                 font-family: $font-family-sectionSubTitle;
-                font-size: rem(12);
-                letter-spacing: kerning(50);
+                font-size: rem(10);
+                letter-spacing: kerning(30);
                 white-space: nowrap;
                 color: $color-text-title;
-                opacity: 0;
-                transition: opacity .4s ease-out .2s;
+                
+                @include mq('md') {
+                    top: -16px;
+                    font-size: rem(12);
+                    letter-spacing: kerning(50);
+                    opacity: 0;
+                    transition: opacity .3s ease-out .2s;
+                }
             }
         }
         
-        &:hover {
-            transform: translateX(0);
-    
-            a::after {
-                opacity: 1;
+        @include mq('md') {
+            &:hover {
+                transform: translateX(0);
+        
+                a::after {
+                    opacity: 1;
+                }
             }
         }
     }

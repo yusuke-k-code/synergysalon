@@ -144,10 +144,10 @@ TOPのフローティング
 $(function () {
     $('#js-floating-toTop, #js-floating-reserve').hide();
     $(window).on('scroll', function () {
-        if ($(this).scrollTop() > 400) {
-            $('#js-floating-toTop, #js-floating-reserve').fadeIn();
+        if ($(this).scrollTop() > 800) {
+            $('#js-floating-toTop, #js-floating-reserve').fadeIn(300);
         } else {
-            $('#js-floating-toTop, #js-floating-reserve').fadeOut();
+            $('#js-floating-toTop, #js-floating-reserve').fadeOut(300);
         }
     });
 
@@ -161,7 +161,7 @@ $(function () {
 モーダル1｜感染症対策について
 ------------------------- */
 $(function () {
-    $('#js-infoCovid').on('click', function (e) {
+    $('#js-infoCovid, #js-info__shop-covid').on('click', function (e) {
         e.preventDefault();
         $('#js-modal-covid').addClass('is-open');
         $('#js-modal-covid').hide().fadeIn(400);

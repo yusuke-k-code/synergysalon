@@ -25,7 +25,6 @@
         z-index: 2;
         
         @include mq('lg') {
-            outline: solid 8px rgba(255, 255, 255, .6);
             outline-offset: -2vw;
         }
     }
@@ -42,6 +41,11 @@
         margin: 0 auto;
         padding-bottom: 16px;
         z-index: 2;
+        display: none;
+
+        @include mq('lg') {
+            display: block;
+        }
         
         a {
             display: block;
@@ -92,7 +96,7 @@
     // フェードインアニメーション
     .fadeIn-fv {
         opacity: 0;
-        transition: opacity 1.2s ease .1s;
+        transition: opacity .8s ease .1s;
     
         &.is-active {
             opacity: 1;
@@ -104,11 +108,19 @@
 コンセプト
 ------------------------- */
 .concept {
-    margin-top: $section-top;
+    margin-top: $section-top-sp;
     position: relative;
+    
+    @include mq('md') {
+        margin-top: $section-top;
+    }
 
     .sectionTitle {
-        margin-bottom: $sectionTitle-bottom;
+        margin-bottom: $sectionTitle-bottom-sp;
+        
+        @include mq('md') {
+            margin-bottom: $sectionTitle-bottom;
+        }
     }
 
     &__textBox {
@@ -118,11 +130,21 @@
 
     &__header {
         text-align: center;
-        font-size: rem(24);
+        font-size: rem(18);
+        
+        @include mq('md') {
+            font-size: rem(24);
+        }
     }
 
     &__text {
-        margin-top: 85px;
+        margin-top: 60px;
+        font-size: rem(14);
+        
+        @include mq('md') {
+            margin-top: 85px;
+            font-size: rem(16);
+        }
     }
 }
 
@@ -130,27 +152,47 @@
 メニュー 
 ------------------------- */
 .menu {
-    margin-top: $section-top;
+    margin-top: $section-top-sp;
     background: transparent url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat top right / cover;
     background-attachment: fixed;
     
+    @include mq('md') {
+        margin-top: $section-top;
+    }
+    
     .sectionTitle {
-        margin-bottom: $sectionTitle-bottom;
+        margin-bottom: $sectionTitle-bottom-sp;
+        
+        @include mq('md') {
+            margin-bottom: $sectionTitle-bottom;
+        }
     }
     
     &__wrapper {
         position: relative;
-        padding-top: 60px;
+        padding-top: 40px;
+        
+        @include mq('md') {
+            padding-top: 60px;
+        }
     }
 
     &__board {
         max-width: 770px;
-        margin: 0 auto;
+        margin: 0 20px;
         background-color: $color-bg;
         position: relative;
-        display: flex;
-        padding: 50px 60px 80px;
+        padding: 40px 25px 60px;
         box-shadow: 2px 2px 7px rgba(170, 170, 170, .9);
+        
+        @include mq('md') {
+            padding: 50px 60px 80px;
+        }
+
+        @include mq('lg') {
+            margin: 0 auto;
+            display: flex;
+        }
 
         &::before {
             position: absolute;
@@ -158,9 +200,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 95%;
-            height: 94%;
+            width: calc(100% - 18px);
+            height: calc(100% - 18px);
             border: 3px solid $color-gray-opacity;
+            
+            @include mq('md') {
+                width: calc(100% - 38px);
+                height: calc(100% - 38px);
+            }
         }
 
         &-right,
@@ -169,14 +216,21 @@
         }
 
         &-left {
-            margin-right: 48px;
+            
+            @include mq('lg') {
+                margin-right: 48px;
+            }
         }
 
         &-title {
             font-family: $font-family-point;
-            font-size: rem(24);
+            font-size: rem(20);
             letter-spacing: kerning(50);
             text-align: center;
+            
+            @include mq('md') {
+                font-size: rem(24);
+            }
         }
     }
 
@@ -186,8 +240,13 @@
 
     &__list {
         border-bottom: solid 1px $color-gray;
+        font-size: rem(10);
         display: flex;
-        padding: 0 0 12px 8px;
+        
+        @include mq('lg') {
+            font-size: rem(16);
+            padding: 0 0 12px 8px;
+        }
 
         &:not(:first-child) {
             margin-top: 24px;
@@ -212,6 +271,11 @@
         text-shadow: 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239),;
         font-weight: bold;
         padding: 32px 0 85px;
+        font-size: rem(12);
+
+        @include mq('md') {
+            font-size: rem(16);
+        }
 
         // &-text {
 
@@ -263,7 +327,10 @@
     &__items {
         max-width: 790px;
         margin-right: auto;
-        display: flex;
+        
+        @include mq('lg') {
+            display: flex;
+        }
     }
 
     &__item {
@@ -332,7 +399,10 @@
     &__wrapper {
         max-width: 880px;
         margin: 0 auto;
-        display: flex;
+        
+        @include mq('lg') {
+            display: flex;
+        }
     }
 
     &__profile {
@@ -491,7 +561,7 @@
 
         &-link {
             display: block;
-            transition: opacity .4s ease-out 0s;
+            transition: opacity .3s ease-out 0s;
             
             &:hover {
                 opacity: .7;
@@ -500,9 +570,12 @@
     }
 
     &__items {
-        display: flex;
         justify-content: space-between;
         margin-top: 70px;
+
+        @include mq('lg') {
+            display: flex;
+        }
     }
 
     &__item {
@@ -526,7 +599,7 @@
 }
 
 /* -------------------------
-店舗情報 
+店舗案内
 ------------------------- */
 .info {
     margin-top: $section-top;
@@ -543,6 +616,11 @@
 
     &__container {
         display: flex;
+        flex-direction: column-reverse;
+        
+        @include mq('lg') {
+            flex-direction: row;
+        }
     }
 
     &__map {
@@ -550,13 +628,13 @@
 
         &-img {
             width: 350px;
+            max-width: 80%;
             padding: 30px 25px 30px 30px;
             border: 1px solid $color-main;
         }
 
         &-container {
             padding: 30px;
-            // margin-left: 18px;
         }
 
         &-access {
@@ -596,6 +674,16 @@
                 font-size: rem(16);
                 font-weight: normal;
                 margin-left: 20px;
+            }
+        }
+
+        &-covid {
+            text-decoration: underline;
+            cursor: pointer;
+            transition: opacity .3s ease-out 0s;
+
+            &:hover {
+                opacity: .6;
             }
         }
 
@@ -752,20 +840,30 @@
     }
 
     &__items {
-        display: flex;
-        justify-content: center;
         margin-top: 48px;
+        
+        @include mq('lg') {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__item {
         width: 250px;
         box-shadow: 2.1px 2.1px 9.5px 0.5px rgba(162, 158, 157, 0.7);
         position: relative;
+
+        @include mq('under-md') {
+            margin: 0 auto;
+        }
         
         &:nth-child(1) {
-            margin-right: 70px;
             border-radius: 15px;
             background-color: $color-bg;
+            
+            @include mq('lg') {
+                margin-right: 70px;
+            }
 
             img {
                 min-width: 250px;
@@ -818,7 +916,7 @@
         
         &-link {
             display: block;
-            transition: opacity .4s ease-out 0s;
+            transition: opacity .3s ease-out 0s;
             -webkit-transform-style: preserve-3d; //transformとopacity併用によるsafariの不具合対応
 
             &:hover {
@@ -868,7 +966,10 @@
     }
 
     &__item {
-        display: flex;
+        
+        @include mq('lg') {
+            display: flex;
+        }
 
         &:not(:first-child) {
             margin-top: 38px;

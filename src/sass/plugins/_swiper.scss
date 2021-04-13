@@ -10,11 +10,19 @@ Swiper
     }
     
     .swiper-slide.slide1 {
-        background: transparent url(../../../public/assets/img/pc/top-bg1.jpg) no-repeat bottom center / cover ;
+        background: transparent url(../../../public/assets/img/sp/top-bg1-sp.jpg) no-repeat bottom center / cover;
+
+        @include mq('md') {
+            background: transparent url(../../../public/assets/img/pc/top-bg1.jpg) no-repeat bottom center / cover;
+        }
     }
 
     .swiper-slide.slide2 {
-        background: transparent url(../../../public/assets/img/pc/top-bg2.jpg) no-repeat top center / cover ;
+        background: transparent url(../../../public/assets/img/sp/top-bg2-sp.jpg) no-repeat bottom center / cover;
+
+        @include mq('md') {
+            background: transparent url(../../../public/assets/img/pc/top-bg2.jpg) no-repeat top center / cover;
+        }
     }
 
     // ページネーション調整

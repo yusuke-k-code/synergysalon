@@ -112,25 +112,28 @@
             <nav class="drawer" id="js-drawer" aria-label="サイト内のドロワーメニュー">
                 <ul class="drawer__lists">
                     <li class="drawer__list">
-                        <a class="drawer__link" href="#">HOME</a>
+                        <a class="drawer__link" href="#">トップ<span>HOME</span></a>
                     </li>
                     <li class="drawer__list">
-                        <a class="drawer__link" href="#concept">コンセプト</a>
+                        <a class="drawer__link" href="#concept">コンセプト<span>CONCEPT</span></a>
                     </li>
                     <li class="drawer__list">
-                        <a class="drawer__link" href="#menu">メニュー</a>
+                        <a class="drawer__link" href="#menu">メニュー<span>MENU</span></a>
                     </li>
                     <li class="drawer__list">
-                        <a class="drawer__link" href="#stylist">スタイリスト</a>
+                        <a class="drawer__link" href="#stylist">スタイリスト<span>STYLIST</span></a>
                     </li>
                     <li class="drawer__list">
-                        <a class="drawer__link" href="#info">店舗案内</a>
+                        <a class="drawer__link" href="#info">店舗案内<span>INFO</span></a>
                     </li>
                     <li class="drawer__list">
-                        <a class="drawer__link" href="#reserve">ご予約</a>
+                        <a class="drawer__link" href="#reserve">ご予約<span>RESERVE</span></a>
                     </li>
                     <li class="drawer__list">
-                        <a class="drawer__link" href="#contact">お問い合わせ</a>
+                        <a class="drawer__link" href="#contact">お問い合わせ<span>CONTACT</span></a>
+                    </li>
+                    <li class="drawer__list">
+                        <a class="drawer__link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/insta_sample_account/?hl=ja"><img src="./assets/img/pc/instagram-icon.png" alt="Instagram" width="24px"></a>
                     </li>
                 </ul>
             </nav>
@@ -152,6 +155,15 @@
             </section>
         </div>
         <!-- //ここまでモーダル｜感染症対策について -->
+
+        <!-- フローティング -->
+        <div class="floating-btn toTop" id="js-floating-toTop">
+            <a href="#"></a>
+        </div>
+        <div class="floating-btn toReserve" id="js-floating-reserve">
+            <a href="#reserve">ご予約は<br>こちら</a>
+        </div>
+        <!-- //ここまでフローティング -->
     </header>
     <!-- //ここまでヘッダー -->
 
@@ -162,12 +174,14 @@
             <h2 class="sectionTitle fadeIn"><span class="sectionTitle-box left">コンセプト</span></h2>
             <div class="concept__textBox">
                 <p class="concept__header fadeIn">
-                    １対１にこだわった、１人だけの空間で、<br>
+                    １対１にこだわった、<br class="hidden-md">
+                    １人だけの空間で、<br>
                     自分だけの美容時間を。<br>
                     身近な”あなた専用サロン”です。
                 </p>
                 <p class="concept__text fadeIn">
-                    美容室のほとんどは、複数のスタッフと複数のお客様が１つの空間に集まります。場合によっては複数人のお客様を１人のスタッフが同時に担当することも。<br>しかし、それだとお客様がリラックスできないと感じ、当サロンは完全予約制で他のお客様とバッティングをしない１対１の空間をご提供いたします。
+                    美容室のほとんどは、複数のスタッフと複数のお客様が１つの空間に集まり、場合によっては複数人のお客様を１人のスタッフが同時に担当することもあります。<br class="hidden-sm">
+                    当サロンではよりお客様にリラックスして欲しいという想いから、完全予約制で他のお客様とバッティングをしない１対１のあなただけの空間を提供しています。
                 </p>
             </div>
             <div class="sectionSubTitle left fadeIn-under">CONCEPT</div>
@@ -175,9 +189,9 @@
         <!-- //ここまでコンセプト -->
         
         <!-- メニュー -->
-        <section class="menu" id="menu">
+        <section class="menu">
             <div class="menu__wrapper inner">
-                <h2 class="sectionTitle shadow fadeIn"><span class="sectionTitle-box right white">メニュー</span></h2>
+                <h2 class="sectionTitle shadow fadeIn" id="menu"><span class="sectionTitle-box right white">メニュー</span></h2>
                 <div class="menu__board fadeIn">
                     <section class="menu__board-left">
                         <h3 class="menu__board-title">Cut & Perm</h3>
@@ -233,7 +247,7 @@
                 </div>
                 <div class="menu__notice fadeIn">
                     <p class="menu__notice-text">◆ 価格は全て税込です。</p>
-                    <p class="menu__notice-text">◆ 親子、兄弟、カップルなど、２名様まででしたらご一緒に施術も可能です。</p>
+                    <p class="menu__notice-text">◆ 親子、兄弟、カップルなど、２名様まででしたら<br class="hidden-md">ご一緒に施術も可能です。</p>
                 </div>
                 <div class="sectionSubTitle right white fadeIn-under">MENU</div>
             </div>
@@ -275,6 +289,10 @@
         <section class="stylist inner" id="stylist">
             <h2 class="sectionTitle fadeIn"><span class="sectionTitle-box left">スタイリスト</span></h2>
             <div class="stylist__wrapper">
+                <p class="stylist__greeting-text hidden-lg">
+                    はじめまして。<br>
+                    シナジーサロン代表の支那寺 太郎です。
+                </p>
                 <div class="stylist__profile">
                     <div class="stylist__container">
                         <div class="stylist__img">
@@ -300,7 +318,7 @@
                 </div>
                 <div class="stylist__greeting">
                     <div class="stylist__greeting-container fadeIn">
-                        <p class="stylist__greeting-text">
+                        <p class="stylist__greeting-text hidden-under-md">
                             はじめまして。<br>
                             シナジーサロン代表の支那寺 太郎です。
                         </p>
@@ -360,7 +378,7 @@
         </div>
         <!-- //ここまでインスタグラム -->
 
-        <!-- 店舗情報 -->
+        <!-- 店舗案内 -->
         <section class="info inner" id="info">
             <h2 class="sectionTitle fadeIn"><span class="sectionTitle-box right">店舗案内</span></h2>
             <div class="info__wrapper">
@@ -375,7 +393,8 @@
                         </div>
                     </div>
                     <div class="info__shop fadeIn">
-                        <h3 class="info__shop-name">Synergy Salon<span>シナジーサロン</span> </h3>
+                        <h3 class="info__shop-name">Synergy Salon<span>シナジーサロン</span></h3>
+                        <p class="info__shop-covid hidden-lg" id="js-info__shop-covid">＞ 感染症対策について</p>
                         <dl class="info__shop-items">
                             <div class="info__shop-item">
                                 <dt class="info__shop-title">
@@ -492,23 +511,23 @@
                 <form id="js-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW35Df7_WXJVyMxPJ3NgEgzO0V1TsaOnXw6C2qcUtK7_3FrA/formResponse" method="post" class="fadeIn">
                     <div class="contact__items">
                         <div class="contact__item">
-                            <label for="name" class="contact__label"><span class="required">お名前</span></label>
+                            <label for="name" class="contact__label"><span class="required"></span>お名前</label>
                             <input id="name" type="text" name="entry.850211798" class="contact__name" required>
                         </div>
                         <div class="contact__item">
-                            <label for="ruby" class="contact__label"><span class="required">フリガナ</span></label>
+                            <label for="ruby" class="contact__label"><span class="required"></span>フリガナ</label>
                             <input id="ruby" type="text" name="entry.43872417" class="contact__name">
                         </div>
                         <div class="contact__item">
-                            <label for="email" class="contact__label"><span class="required">メールアドレス</span></label>
+                            <label for="email" class="contact__label"><span class="required"></span>メールアドレス</label>
                             <input id="email" type="email" name="entry.1079295882" class="contact__mail" required>
                         </div>
                         <div class="contact__item">
-                            <label for="tel" class="contact__label"><span class="optional">電話番号</span></label>
+                            <label for="tel" class="contact__label"><span class="optional"></span>電話番号</label>
                             <input id="tel" type="tel" name="entry.1030601264" pattern="[\d\-]*" class="contact__phone">
                         </div>
                         <div class="contact__item">
-                            <label for="textarea" class="contact__label"><span class="required">お問い合わせ内容</span></label>
+                            <label for="textarea" class="contact__label"><span class="required"></span>お問い合わせ内容</label>
                             <textarea id="textarea" name="entry.1692141827" class="contact__textarea" required></textarea>
                         </div>
                         <div class="contact__footer">
@@ -594,15 +613,6 @@
             <div class="sectionSubTitle right fadeIn-under">CONTACT</div>
         </section>
         <!-- //ここまでお問い合わせ -->
-
-        <!-- フローティング -->
-        <div class="floating-btn toTop" id="js-floating-toTop">
-            <a href="#"></a>
-        </div>
-        <div class="floating-btn toReserve" id="js-floating-reserve">
-            <a href="#reserve">ご予約は<br>こちら</a>
-        </div>
-        <!-- //ここまでフローティング -->
     </main>
 
     <!-- フッター -->

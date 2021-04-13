@@ -7,7 +7,11 @@
     &__top {
         background: transparent url(../../../public/assets/img/pc/footer-bg.jpg) no-repeat center top / cover;
         position: relative;
-        height: 340px;
+        height: 180px;
+        
+        @include mq('md') {
+            height: 340px;
+        }
 
         &::before {
             position: absolute;
@@ -16,12 +20,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            outline: solid 6px rgba(255, 255, 255, .6);
-            outline-offset: -23px;
             
-            @include mq('lg') {
-                outline: solid 8px rgba(255, 255, 255, .6);
-                outline-offset: -25px;
+            @include mq('md') {
+                outline: solid 6px rgba(255, 255, 255, .6);
+                outline-offset: -21px;
             }
         }
     }
@@ -33,14 +35,22 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: rem(14);
+        font-size: rem(12);
         color: $color-text-white;
         text-shadow: 0 0 4px rgba(43, 43, 43, .8);
+        
+        @include mq('md') {
+            font-size: rem(14);
+        }
     }
 
     &__logo {
-        width: 200px;
+        width: 100px;
         margin: 0 auto;
+        
+        @include mq('md') {
+            width: 200px;
+        }
     }
 
     &__address {
@@ -55,16 +65,25 @@
     }
     
     &__bottom {
-        height: 60px;
+        height: 50px;
         background-color: $color-bg-footer;
         @include z-index("footer");
+        
+        @include mq('md') {
+            height: 60px;
+        }
     }
 
     &__copyright {
-        line-height: 60px;
+        line-height: 50px;
         text-align: center;
         font-family: $font-family-point;
-        font-size: rem(17);
+        font-size: rem(14);
         color: $color-text-white;
+        
+        @include mq('md') {
+            line-height: 60px;
+            font-size: rem(17);
+        }
     }
 }

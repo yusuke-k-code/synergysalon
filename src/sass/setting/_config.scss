@@ -25,12 +25,15 @@ $header-height-pc: 70px;
 $header-height-sp: 60px;
 
 $section-top: 140px;
+$section-top-sp: 100px;
 $sectionTitle-bottom: 80px;
+$sectionTitle-bottom-sp: 60px;
 
 // ブレークポイント
 $breakpoints: (
     sm: 'screen and (max-width: 559px)',
     md: 'screen and (min-width: 560px)', //TAB想定 560〜959px（〜559pxがSP想定）
+    under-md: 'screen and (max-width: 959px)', //959pxまでに適用
     lg: 'screen and (min-width: 960px)', //PC想定 960〜コンテンツ幅−1px
     xl: 'screen and (min-width: #{$layout-inner-width})', //PC想定 コンテンツ幅以上
 );
