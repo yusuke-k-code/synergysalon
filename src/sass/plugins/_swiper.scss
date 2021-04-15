@@ -6,6 +6,8 @@ Swiper
     height: 100vh;
     
     @include mq('lg') {
+        width: 100vw;
+        height: 100vh;
         height: calc(100vh - #{$header-height-pc});
     }
     

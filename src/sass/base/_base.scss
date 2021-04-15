@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
     font-family: $font-family-ja;
     font-weight: 400;
-    font-size: rem(24);
+    font-size: rem(26);
     line-height: leading(40, 30);
     color: $color-text-title;
     text-align: center;
@@ -40,7 +40,6 @@ body {
     
     @include mq('md') {
         font-size: rem(30);
-        margin-top: 20px;
     }
 
     &-box {
@@ -80,7 +79,7 @@ body {
     
         &.right {
             &::before {
-                top: -10px;
+                top: -8px;
                 right: -18px;
                 
                 @include mq('md') {
@@ -90,7 +89,7 @@ body {
             }
     
             &::after {
-                top: 8px;
+                top: 10px;
                 right: -30px;
                 
                 @include mq('md') {                    
@@ -102,7 +101,7 @@ body {
     
         &.left {
             &::before {
-                top: -10px;
+                top: -8px;
                 left: -18px;
                 
                 @include mq('md') {
@@ -112,7 +111,7 @@ body {
             }
     
             &::after {
-                top: 8px;
+                top: 10px;
                 left: -30px;
                 
                 @include mq('md') {
@@ -246,7 +245,7 @@ body {
 
 /* md以下で非表示 */
 .hidden-under-md {
-    @include mq('md-only') {
+    @include mq('under-md') {
         display: none;
     }
 }
