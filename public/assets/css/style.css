@@ -10,7 +10,7 @@
   z-index: 23;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .floating-btn {
     width: 82px;
     height: 74px;
@@ -29,11 +29,17 @@
 }
 
 .floating-btn.toTop {
-  bottom: 130px;
+  bottom: 124px;
   background-color: #8BC889;
 }
 
 @media screen and (min-width: 560px) {
+  .floating-btn.toTop {
+    bottom: 494px;
+  }
+}
+
+@media screen and (min-width: 960px) {
   .floating-btn.toTop {
     bottom: 514px;
   }
@@ -56,7 +62,7 @@
           transform: rotate(-90deg) skew(120deg);
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .floating-btn.toTop a::before {
     top: 38px;
     left: 24px;
@@ -77,7 +83,7 @@
   color: #8BC889;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .floating-btn.toTop a::after {
     top: -18px;
     font-size: 0.75rem;
@@ -88,7 +94,7 @@
   }
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .floating-btn.toTop:hover {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -122,7 +128,7 @@
   letter-spacing: 0.02em;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .floating-btn.toReserve a {
     font-size: 0.75rem;
     padding: 19px 9px 19px 0;
@@ -143,7 +149,7 @@
   color: #608F8D;
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .floating-btn.toReserve a::after {
     top: -16px;
     font-size: 0.75rem;
@@ -154,7 +160,7 @@
   }
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 960px) {
   .floating-btn.toReserve:hover {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -1652,6 +1658,20 @@ SP時のドロワーメニュー
   z-index: 1;
 }
 
+@media screen and (min-width: 560px) {
+  .style__item-name {
+    padding: 6px 6px 0 0;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .style__item-name {
+    padding: 12px 12px 0 0;
+    font-size: 1.25rem;
+  }
+}
+
 .style__item-name span {
   position: relative;
 }
@@ -1665,6 +1685,22 @@ SP時のドロワーメニュー
   height: 7px;
   background-color: rgba(139, 200, 137, 0.3);
   z-index: -1;
+}
+
+@media screen and (min-width: 560px) {
+  .style__item-name span::before {
+    left: -8px;
+    right: -14px;
+    height: 6px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .style__item-name span::before {
+    left: -10px;
+    right: -20px;
+    height: 7px;
+  }
 }
 
 /* -------------------------
@@ -1756,7 +1792,6 @@ SP時のドロワーメニュー
     margin-left: auto;
     margin-top: 40px;
     position: relative;
-    z-index: -1;
   }
 }
 
@@ -1911,8 +1946,13 @@ SP時のドロワーメニュー
 インスタグラム
 ------------------------- */
 .insta {
-  margin-top: 120px;
-  padding-bottom: 40px;
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 560px) {
+  .insta {
+    margin-top: 120px;
+  }
 }
 
 .insta__wrapper {
@@ -1937,38 +1977,78 @@ SP時のドロワーメニュー
 
 .insta__arrow {
   position: relative;
-  margin-right: 40px;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 560px) {
+  .insta__arrow {
+    margin-right: 40px;
+  }
 }
 
 .insta__arrow-line {
   display: block;
-  width: 340px;
-  height: 10px;
+  width: 180px;
+  height: 8px;
   border-bottom: 1px solid #608F8D;
   border-right: 2px solid #608F8D;
-  -webkit-transform: skew(60deg) translateY(-5px);
-          transform: skew(60deg) translateY(-5px);
+  -webkit-transform: skew(60deg) translateY(-4px);
+          transform: skew(60deg) translateY(-4px);
+}
+
+@media screen and (min-width: 560px) {
+  .insta__arrow-line {
+    width: 340px;
+    height: 10px;
+    -webkit-transform: skew(60deg) translateY(-5px);
+            transform: skew(60deg) translateY(-5px);
+  }
 }
 
 .insta__arrow-text {
   font-family: "Courgette", cursive;
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: 0.05em;
   position: absolute;
 }
 
+@media screen and (min-width: 560px) {
+  .insta__arrow-text {
+    font-size: 1.25rem;
+  }
+}
+
 .insta__arrow-text:nth-of-type(1) {
   bottom: 4px;
-  left: 24px;
+  left: 8px;
+}
+
+@media screen and (min-width: 560px) {
+  .insta__arrow-text:nth-of-type(1) {
+    left: 24px;
+  }
 }
 
 .insta__arrow-text:nth-of-type(2) {
-  bottom: -26px;
-  right: 24px;
+  bottom: -22px;
+  right: 16px;
+}
+
+@media screen and (min-width: 560px) {
+  .insta__arrow-text:nth-of-type(2) {
+    bottom: -26px;
+    right: 24px;
+  }
 }
 
 .insta__img {
-  width: 60px;
+  width: 50px;
+}
+
+@media screen and (min-width: 560px) {
+  .insta__img {
+    width: 60px;
+  }
 }
 
 .insta__img-link {
@@ -1982,26 +2062,46 @@ SP時のドロワーメニュー
 }
 
 .insta__items {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 560px) {
   .insta__items {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 70px;
   }
 }
 
 .insta__item {
-  width: 200px;
+  width: calc(200 / 680 * 100%);
+  min-width: 200px;
+  margin: 0 auto;
   background-color: #8BC889;
   overflow: hidden;
+}
+
+@media screen and (min-width: 560px) {
+  .insta__item {
+    min-width: 0;
+    margin: 0 15px;
+  }
+}
+
+.insta__item:not(:first-child) {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 560px) {
+  .insta__item:not(:first-child) {
+    margin-top: auto;
+  }
 }
 
 .insta__item-link {
@@ -2026,17 +2126,38 @@ SP時のドロワーメニュー
 店舗案内
 ------------------------- */
 .info {
-  margin-top: 140px;
+  margin-top: 100px;
   position: relative;
 }
 
-.info .sectionTitle {
-  margin-bottom: 80px;
+@media screen and (min-width: 560px) {
+  .info {
+    margin-top: 140px;
+  }
 }
 
-.info__wrapper {
-  max-width: 860px;
-  margin: 0 auto;
+@media screen and (min-width: 960px) {
+  .info {
+    max-width: 1000px;
+    margin: 140px auto 0;
+  }
+}
+
+.info .sectionTitle {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 560px) {
+  .info .sectionTitle {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .info__wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+  }
 }
 
 .info__container {
@@ -2066,22 +2187,49 @@ SP時のドロワーメニュー
   -webkit-flex: 0 0 calc(350 / 880 * 100%);
       -ms-flex: 0 0 calc(350 / 880 * 100%);
           flex: 0 0 calc(350 / 880 * 100%);
+  max-width: 290px;
+  margin: 60px auto 0;
+}
+
+@media screen and (min-width: 560px) {
+  .info__map {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .info__map {
+    margin: 0;
+  }
 }
 
 .info__map-img {
-  width: 350px;
   padding: 30px 25px 30px 30px;
   border: 1px solid #666666;
 }
 
 .info__map-container {
-  padding: 30px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 960px) {
+  .info__map-container {
+    margin-top: auto;
+    padding: 20px;
+  }
 }
 
 .info__map-access {
   line-height: 1;
   position: relative;
   padding-left: 20px;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 560px) {
+  .info__map-access {
+    font-size: 1rem;
+  }
 }
 
 .info__map-access::before {
@@ -2091,15 +2239,35 @@ SP時のドロワーメニュー
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background-color: #666666;
+}
+
+@media screen and (min-width: 560px) {
+  .info__map-access::before {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .info__map-text {
   line-height: 1.5;
-  margin-top: 16px;
+  margin-top: 8px;
   padding-left: 20px;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 560px) {
+  .info__map-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .info__map-text {
+    margin-top: 16px;
+  }
 }
 
 .info__shop {
@@ -2107,19 +2275,52 @@ SP時のドロワーメニュー
   -webkit-flex: 0 1 calc(530 / 880 * 100%);
       -ms-flex: 0 1 calc(530 / 880 * 100%);
           flex: 0 1 calc(530 / 880 * 100%);
-  margin-left: 50px;
+  margin: 0 15px;
+}
+
+@media screen and (min-width: 560px) {
+  .info__shop {
+    margin: 0 15%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .info__shop {
+    margin: 0 0 0 50px;
+  }
 }
 
 .info__shop-name {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   line-height: 1;
+  text-align: center;
+}
+
+@media screen and (min-width: 560px) {
+  .info__shop-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .info__shop-name {
+    text-align: left;
+  }
 }
 
 .info__shop-name span {
   font-size: 1rem;
   font-weight: normal;
-  margin-left: 20px;
+  margin: 10px 0 0 0;
+  display: block;
+}
+
+@media screen and (min-width: 960px) {
+  .info__shop-name span {
+    display: inline;
+    margin: 0 0 0 20px;
+  }
 }
 
 .info__shop-covid {
@@ -2127,6 +2328,8 @@ SP時のドロワーメニュー
   cursor: pointer;
   -webkit-transition: opacity .3s ease-out 0s;
   transition: opacity .3s ease-out 0s;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .info__shop-covid:hover {
@@ -2134,7 +2337,13 @@ SP時のドロワーメニュー
 }
 
 .info__shop-items {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 960px) {
+  .info__shop-items {
+    margin-top: 40px;
+  }
 }
 
 .info__shop-item {
@@ -2152,21 +2361,68 @@ SP時のドロワーメニュー
 
 .info__shop-title {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 25%;
-      -ms-flex: 0 1 25%;
-          flex: 0 1 25%;
+  -webkit-flex: 0 1 32%;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 560px) {
+  .info__shop-title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .info__shop-title {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 25%;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+  }
 }
 
 .info__shop-text {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 75%;
-      -ms-flex: 0 1 75%;
-          flex: 0 1 75%;
-  margin-left: 42px;
+  -webkit-flex: 0 1 68%;
+      -ms-flex: 0 1 68%;
+          flex: 0 1 68%;
+  font-size: 0.875rem;
+  margin-left: 24px;
 }
 
-.info__shop-text span {
-  margin-right: 16px;
+@media screen and (min-width: 560px) {
+  .info__shop-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .info__shop-text {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 75%;
+        -ms-flex: 0 1 75%;
+            flex: 0 1 75%;
+    margin-left: 42px;
+  }
+}
+
+.info__shop-text.address span {
+  display: block;
+  margin: 0 0 -44px 0;
+}
+
+@media screen and (min-width: 560px) {
+  .info__shop-text.address span {
+    margin: 0 16px -44px 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .info__shop-text.address span {
+    display: inline;
+    margin: 0 16px 0 0;
+  }
 }
 
 .info__payment-items:last-child {
@@ -2175,8 +2431,14 @@ SP時のドロワーメニュー
 
 .info__payment-title {
   position: relative;
-  padding-left: 20px;
+  padding-left: 16px;
   line-height: 1.875;
+}
+
+@media screen and (min-width: 560px) {
+  .info__payment-title {
+    padding-left: 20px;
+  }
 }
 
 .info__payment-title::before {
@@ -2186,21 +2448,41 @@ SP時のドロワーメニュー
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background-color: #666666;
 }
 
+@media screen and (min-width: 560px) {
+  .info__payment-title::before {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 .info__payment-text {
-  padding-left: 20px;
+  padding-left: 16px;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 560px) {
+  .info__payment-text {
+    padding-left: 20px;
+  }
 }
 
 .info__iframe {
   position: relative;
   width: 100%;
+  min-height: 250px;
   padding-top: 46.51163%;
-  margin-top: 78px;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 960px) {
+  .info__iframe {
+    margin-top: 78px;
+  }
 }
 
 .info__iframe iframe {

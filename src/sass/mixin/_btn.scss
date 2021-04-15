@@ -54,7 +54,7 @@
     height: 48px;
     @include z-index("floating");
     
-    @include mq('md') {
+    @include mq('lg') {
         width: 82px;
         height: 74px;
         transform: translateX(8px);
@@ -67,10 +67,14 @@
     }
 
     &.toTop {
-        bottom: 130px;
+        bottom: 124px;
         background-color: $color-primary;
 
         @include mq('md') {
+            bottom: 494px;
+        }
+
+        @include mq('lg') {
             bottom: 514px;
         }
 
@@ -88,7 +92,7 @@
                 border-right: 2px solid $color-text-white;
                 transform: rotate(-90deg) skew(120deg);
                 
-                @include mq('md') {
+                @include mq('lg') {
                     top: 38px;
                     left: 24px;
                     width: 30px;
@@ -107,7 +111,7 @@
                 white-space: nowrap;
                 color: $color-text-primary;
                 
-                @include mq('md') {
+                @include mq('lg') {
                     top: -18px;
                     font-size: rem(12);
                     letter-spacing: kerning(50);
@@ -117,7 +121,7 @@
             } 
         }
 
-        @include mq('md') {
+        @include mq('lg') {
             &:hover {
                 transform: translateX(0);
         
@@ -148,7 +152,7 @@
             line-height: 1.5em;
             letter-spacing: kerning(20);
             
-            @include mq('md') {
+            @include mq('lg') {
                 font-size: rem(12);
                 padding: 19px 9px 19px 0;
                 letter-spacing: kerning(50);
@@ -166,7 +170,7 @@
                 white-space: nowrap;
                 color: $color-text-title;
                 
-                @include mq('md') {
+                @include mq('lg') {
                     top: -16px;
                     font-size: rem(12);
                     letter-spacing: kerning(50);
@@ -176,7 +180,7 @@
             }
         }
         
-        @include mq('md') {
+        @include mq('lg') {
             &:hover {
                 transform: translateX(0);
         
