@@ -1179,9 +1179,13 @@
 予約
 ------------------------- */
 .reserve {
-    margin-top: $section-top;
+    margin-top: $section-top-sp;
     background: transparent url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat center top / cover;
     background-attachment: fixed;
+    
+    @include mq('md') {
+        margin-top: $section-top;
+    }
 
     .sectionTitle {
         font-weight: bold;
@@ -1189,7 +1193,11 @@
 
     &__wrapper {
         position: relative;
-        padding: 80px 0;
+        padding: 40px 0 60px;
+        
+        @include mq('md') {
+            padding: 80px 0;
+        }
     }
 
     &__title {
@@ -1242,7 +1250,7 @@
     &__items {
         margin-top: 48px;
         
-        @include mq('lg') {
+        @include mq('md') {
             display: flex;
             justify-content: center;
         }
@@ -1252,17 +1260,18 @@
         width: 250px;
         box-shadow: 2.1px 2.1px 9.5px 0.5px rgba(162, 158, 157, 0.7);
         position: relative;
-
-        @include mq('under-md') {
-            margin: 0 auto;
-        }
         
         &:nth-child(1) {
             border-radius: 15px;
             background-color: $color-bg;
+            margin: 0 auto 0;
             
+            @include mq('md') {
+                margin: 40px 45px 0 auto;
+            }
+
             @include mq('lg') {
-                margin-right: 70px;
+                margin: 40px 70px 0 auto;
             }
 
             img {
@@ -1274,6 +1283,7 @@
             border-radius: 15px;
             min-width: 250px;
             background-color: $color-bg;
+            margin: 40px auto 0;
             
             img {
                 width: calc(250px - 47px * 2);
@@ -1334,8 +1344,12 @@
 お問い合わせ 
 ------------------------- */
 .contact {
-    margin-top: $section-top;
+    margin-top: $section-top-sp;
     position: relative;
+    
+    @include mq('md') {
+        margin-top: $section-top;
+    }
 
     .sectionTitle {
         margin-bottom: 40px;
@@ -1372,7 +1386,11 @@
         }
 
         &:not(:first-child) {
-            margin-top: 38px;
+            margin-top: 16px;
+            
+            @include mq('lg') {
+                margin-top: 38px;
+            }
         }
     }
 

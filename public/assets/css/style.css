@@ -2498,9 +2498,15 @@ SP時のドロワーメニュー
 予約
 ------------------------- */
 .reserve {
-  margin-top: 140px;
+  margin-top: 100px;
   background: transparent url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat center top/cover;
   background-attachment: fixed;
+}
+
+@media screen and (min-width: 560px) {
+  .reserve {
+    margin-top: 140px;
+  }
 }
 
 .reserve .sectionTitle {
@@ -2509,7 +2515,13 @@ SP時のドロワーメニュー
 
 .reserve__wrapper {
   position: relative;
-  padding: 80px 0;
+  padding: 40px 0 60px;
+}
+
+@media screen and (min-width: 560px) {
+  .reserve__wrapper {
+    padding: 80px 0;
+  }
 }
 
 .reserve__title {
@@ -2563,7 +2575,7 @@ SP時のドロワーメニュー
   margin-top: 48px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 560px) {
   .reserve__items {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2583,20 +2595,21 @@ SP時のドロワーメニュー
   position: relative;
 }
 
-@media screen and (max-width: 959px) {
-  .reserve__item {
-    margin: 0 auto;
-  }
-}
-
 .reserve__item:nth-child(1) {
   border-radius: 15px;
   background-color: #FFF;
+  margin: 0 auto 0;
+}
+
+@media screen and (min-width: 560px) {
+  .reserve__item:nth-child(1) {
+    margin: 40px 45px 0 auto;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .reserve__item:nth-child(1) {
-    margin-right: 70px;
+    margin: 40px 70px 0 auto;
   }
 }
 
@@ -2608,6 +2621,7 @@ SP時のドロワーメニュー
   border-radius: 15px;
   min-width: 250px;
   background-color: #FFF;
+  margin: 40px auto 0;
 }
 
 .reserve__item:nth-child(2) img {
@@ -2695,8 +2709,14 @@ SP時のドロワーメニュー
 お問い合わせ 
 ------------------------- */
 .contact {
-  margin-top: 140px;
+  margin-top: 100px;
   position: relative;
+}
+
+@media screen and (min-width: 560px) {
+  .contact {
+    margin-top: 140px;
+  }
 }
 
 .contact .sectionTitle {
@@ -2747,7 +2767,13 @@ SP時のドロワーメニュー
 }
 
 .contact__item:not(:first-child) {
-  margin-top: 38px;
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 960px) {
+  .contact__item:not(:first-child) {
+    margin-top: 38px;
+  }
 }
 
 .contact__label {
