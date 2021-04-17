@@ -852,7 +852,6 @@ SP時のドロワーメニュー
 .drawer__lists {
   text-align: center;
   margin: 80px auto 0;
-  width: 50%;
 }
 
 @media screen and (min-width: 560px) {
@@ -864,6 +863,8 @@ SP時のドロワーメニュー
 .drawer__list {
   font-size: 0.9375rem;
   letter-spacing: .4rem;
+  width: 50%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 560px) {
@@ -874,7 +875,7 @@ SP時のドロワーメニュー
 }
 
 .drawer__list:not(:first-child) {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 @media screen and (min-width: 560px) {
@@ -883,13 +884,41 @@ SP時のドロワーメニュー
   }
 }
 
-.drawer__list:last-child {
-  margin-top: 32px;
+.drawer__list.insta {
+  margin-top: 24px;
 }
 
 @media screen and (min-width: 560px) {
-  .drawer__list:last-child {
+  .drawer__list.insta {
     margin-top: 48px;
+  }
+}
+
+.drawer__list.tel {
+  width: 100%;
+}
+
+@media screen and (min-width: 560px) {
+  .drawer__list.tel {
+    margin-top: 48px;
+  }
+}
+
+.drawer__list.tel .drawer__link {
+  display: block;
+  letter-spacing: .2em;
+}
+
+.drawer__list.tel span {
+  font-size: 1rem;
+  letter-spacing: .2em;
+  line-height: 1em;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 560px) {
+  .drawer__list.tel span {
+    font-size: 1.125rem;
   }
 }
 
@@ -919,7 +948,8 @@ SP時のドロワーメニュー
 .drawer__link span {
   font-size: 0.625rem;
   letter-spacing: .6em;
-  line-height: 1.3em;
+  line-height: 1.2em;
+  font-weight: 300;
 }
 
 @media screen and (min-width: 560px) {
@@ -1778,13 +1808,19 @@ SP時のドロワーメニュー
 }
 
 .stylist__profile {
-  width: 100%;
+  margin: 0 15px;
   z-index: 1;
+}
+
+@media screen and (min-width: 560px) {
+  .stylist__profile {
+    width: calc(60% + 120px);
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .stylist__profile {
-    width: 100%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
         -ms-flex: 0 0 50%;

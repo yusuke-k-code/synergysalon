@@ -569,11 +569,15 @@
     }
 
     &__profile {
-        width: 100%;
+        margin: 0 15px;
         z-index: 1;
         
+        @include mq('md') {
+            width: calc(60% + 120px);
+            margin: 0 auto;
+        }
+
         @include mq('lg') {
-            width: 100%;
             flex: 0 0 50%;
             z-index: 1;
         }

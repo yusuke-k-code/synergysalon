@@ -275,16 +275,17 @@ SP時のドロワーメニュー
     &__lists {
         text-align: center;
         margin: 80px auto 0;
-        width: 50%;
         
         @include mq('md') {
             margin: 160px auto 0;
         }
     }
-
+    
     &__list {
         font-size: rem(15);
         letter-spacing: .4rem;
+        width: 50%;
+        margin: 0 auto;
         
         @include mq('md') {
             font-size: rem(18);
@@ -292,18 +293,42 @@ SP時のドロワーメニュー
         }
         
         &:not(:first-child) {
-            margin-top: 16px;
+            margin-top: 14px;
             
             @include mq('md') {
                 margin-top: 28px;
             }
         }
         
-        &:last-child {
-            margin-top: 32px;
-            
+        &.insta {
+            margin-top: 24px;
+
             @include mq('md') {
                 margin-top: 48px;
+            }
+        }
+        
+        &.tel {
+            width: 100%;
+
+            @include mq('md') {
+                margin-top: 48px;
+            }
+
+            .drawer__link {
+                display: block;
+                letter-spacing: .2em;
+            } 
+            
+            span {
+                font-size: rem(16);
+                letter-spacing: .2em;
+                line-height: 1em;
+                margin-right: 8px;
+                
+                @include mq('md') {
+                    font-size: rem(18);
+                }
             }
         }
     }
@@ -322,7 +347,8 @@ SP時のドロワーメニュー
         span {
             font-size: rem(10);
             letter-spacing: .6em;
-            line-height: 1.3em;
+            line-height: 1.2em;
+            font-weight: 300;
             
             @include mq('md') {
                 font-size: rem(12);
