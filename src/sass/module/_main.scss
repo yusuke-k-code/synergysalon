@@ -42,8 +42,8 @@
                 left: 50%;
                 width: 24px;
                 height: 24px;
-                border-bottom: 2px solid $color-main;
-                border-right: 2px solid $color-main;
+                border-bottom: 2px solid $color-bg;
+                border-right: 2px solid $color-bg;
                 transform: translateX(-50%) rotate(45deg);
         
                 @include animation(
@@ -334,10 +334,6 @@
         &-price {
             margin-left: auto;
 
-            @include mq('md') {
-                
-            }
-
             &.indent {
                 margin-right: 9px;
             }
@@ -375,6 +371,7 @@
     }
     
     &__wrapper {
+        position: relative;
         
         @include mq('xl') {
             display: flex;
@@ -542,7 +539,7 @@
 スタイリスト
 ------------------------- */
 .stylist {
-    margin-top: $section-top-sp;
+    margin-top: calc(#{$section-top-sp} + 60px);
     position: relative;
     
     @include mq('md') {
@@ -574,8 +571,9 @@
     &__profile {
         width: 100%;
         z-index: 1;
-
+        
         @include mq('lg') {
+            width: 100%;
             flex: 0 0 50%;
             z-index: 1;
         }
@@ -750,6 +748,7 @@
     &__wrapper {
         max-width: 680px;
         margin: 0 auto;
+        position: relative;
     }
 
     &__contact {
@@ -831,7 +830,7 @@
 
     &__items {
         margin-top: 40px;
-        
+
         @include mq('md') {
             display: flex;
             justify-content: center;
@@ -878,7 +877,7 @@
 店舗案内
 ------------------------- */
 .info {
-    margin-top: $section-top-sp;
+    margin-top: calc(#{$section-top-sp} + 60px);
     position: relative;
     
     @include mq('md') {

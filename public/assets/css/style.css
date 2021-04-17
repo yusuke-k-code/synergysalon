@@ -416,6 +416,31 @@ body {
   right: 0;
 }
 
+.sectionBox {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  height: 83%;
+  z-index: -1;
+}
+
+.sectionBox.style {
+  border-bottom: 200px solid rgba(139, 200, 137, 0.3);
+  border-left: 40vw solid rgba(139, 200, 137, 0.3);
+}
+
+.sectionBox.insta {
+  border-bottom: 180px solid rgba(139, 200, 137, 0.3);
+  border-right: 32vw solid rgba(139, 200, 137, 0.3);
+}
+
+@media screen and (min-width: 560px) {
+  .sectionBox {
+    display: none;
+  }
+}
+
 /* -------------------------
 フェードイン
 ------------------------- */
@@ -1098,8 +1123,8 @@ SP時のドロワーメニュー
     left: 50%;
     width: 24px;
     height: 24px;
-    border-bottom: 2px solid #666666;
-    border-right: 2px solid #666666;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
     -webkit-transform: translateX(-50%) rotate(45deg);
             transform: translateX(-50%) rotate(45deg);
     -webkit-animation-name: movingArrow-fv;
@@ -1467,7 +1492,7 @@ SP時のドロワーメニュー
   margin-left: auto;
 }
 
-@media screen and (min-width: 560px) {}.menu__list-price.indent {
+.menu__list-price.indent {
   margin-right: 9px;
 }
 
@@ -1501,6 +1526,10 @@ SP時のドロワーメニュー
     background: -webkit-linear-gradient(transparent 50%, rgba(139, 200, 137, 0.3) 50%);
     background: linear-gradient(transparent 50%, rgba(139, 200, 137, 0.3) 50%);
   }
+}
+
+.style__wrapper {
+  position: relative;
 }
 
 @media screen and (min-width: 1000px) {
@@ -1707,7 +1736,7 @@ SP時のドロワーメニュー
 スタイリスト
 ------------------------- */
 .stylist {
-  margin-top: 100px;
+  margin-top: calc(100px + 60px);
   position: relative;
 }
 
@@ -1755,6 +1784,7 @@ SP時のドロワーメニュー
 
 @media screen and (min-width: 960px) {
   .stylist__profile {
+    width: 100%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
         -ms-flex: 0 0 50%;
@@ -1958,6 +1988,7 @@ SP時のドロワーメニュー
 .insta__wrapper {
   max-width: 680px;
   margin: 0 auto;
+  position: relative;
 }
 
 .insta__contact {
@@ -2126,7 +2157,7 @@ SP時のドロワーメニュー
 店舗案内
 ------------------------- */
 .info {
-  margin-top: 100px;
+  margin-top: calc(100px + 60px);
   position: relative;
 }
 
@@ -3273,6 +3304,8 @@ Swiper
 .swiper-container {
   width: 100vw;
   height: 100vh;
+  -webkit-box-shadow: 0px 4px 10px 1px rgba(162, 158, 157, 0.8);
+          box-shadow: 0px 4px 10px 1px rgba(162, 158, 157, 0.8);
 }
 
 @media screen and (min-width: 960px) {
