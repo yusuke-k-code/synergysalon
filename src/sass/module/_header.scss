@@ -153,6 +153,11 @@
         &-instagram {
             line-height: 1;
             margin-left: auto;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
         }
         
         &-link {
@@ -300,15 +305,25 @@ SP時のドロワーメニュー
             }
         }
         
-        &.insta {
+        &.insta-menu {
             margin-top: 24px;
 
             @include mq('md') {
                 margin-top: 48px;
             }
+
+            img {
+                width: 24px;
+                height: 24px;
+
+                @include mq('md') {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
         }
         
-        &.tel {
+        &.tel-menu {
             width: 100%;
 
             @include mq('md') {
@@ -391,23 +406,29 @@ SP時のドロワーメニュー
         transform: translate(-50%, -50%);
         background-color: $color-bg;
         padding: 60px;
-        width: 80%;
+        width: 85%;
         max-height: 70vh;
         overflow-y: scroll;
-    }
+        
+        @include mq('md') {
+            width: 90%;
+        }
 
-    .sectionTitle {
-        letter-spacing: kerning(80);
+        @include mq('lg') {
+            padding: 80px;
+            width: 80%;
+        }
     }
 
     &__items {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin-top: $sectionTitle-bottom;
-
+        margin-top: $sectionTitle-bottom-sp;
+        
         @include mq('md') {
             flex-direction: row;
+            margin-top: $sectionTitle-bottom;
         }
     }
 
@@ -416,7 +437,7 @@ SP時のドロワーメニュー
         margin: 0 auto;
 
         &:not(:first-child) {
-            margin-top: 30px;
+            margin-top: 20px;
 
             @include mq('md') {
                 margin-top: 0;

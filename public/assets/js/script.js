@@ -49,26 +49,6 @@ $(function () {
     });
 });
 
-// $(function(){
-//     var headerHeight = $('header').outerHeight();
-//     var urlHash = location.hash;
-//     if(urlHash) {
-//         $('body,html').stop().scrollTop(0);
-//         setTimeout(function(){
-//             var target = $(urlHash);
-//             var position = target.offset().top - headerHeight;
-//             $('body,html').stop().animate({scrollTop:position}, 500);
-//         }, 100);
-//     }
-//     $('a[href^=#]').click(function(){
-//         var href= $(this).attr("href");
-//         var target = $(href);
-//         var position = target.offset().top - headerHeight;
-//         $('body,html').stop().animate({scrollTop:position}, 500);
-//         return false;
-//     });
-// });
-
 /* -------------------------
 FVタイトルのフェードイン
 ------------------------- */
@@ -195,4 +175,16 @@ $(function () {
         });
         return false;
     });
+});
+
+/* -------------------------
+100vhのiOS対策
+------------------------- */
+$(document).ready(function () {
+    var browserHeight = $(window).height();
+    $(".swiper-container").height(browserHeight); // ブラウザの縦のサイズを取得
+});
+$(window).resize(function () { // ページをリサイズした時の処理
+    var browserHeight = $(window).height();
+    $(".swiper-container").height(browserHeight); // ブラウザの縦のサイズを取得
 });

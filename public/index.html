@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- prefix属性でOGP宣言 -->
-<html lang="ja" prefix="og:http://ogp.me/ns#">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
@@ -92,12 +92,12 @@
                 <address class="header__info-tel">
                     <a class="header__info-link" href="tel:012-345-6789"><span>TEL</span>012-345-6789</a>
                 </address>
-                <div class="header__info-container">
+                <ul class="header__info-container">
                     <li class="header__info-covid" id="js-infoCovid">感染症対策について</li>
                     <li class="header__info-instagram">
-                        <a class="header__info-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/insta_sample_account/?hl=ja"><img src="./assets/img/pc/instagram-icon.png" alt="Instagram" width="24px"></a>
+                        <a class="header__info-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/insta_sample_account/?hl=ja"><img src="./assets/img/pc/instagram-icon.png" alt="Instagram"></a>
                     </li>
-                </div>
+                </ul>
             </div>
 
             <!-- ドロワーメニューボタンー -->
@@ -132,10 +132,10 @@
                     <li class="drawer__list">
                         <a class="drawer__link" href="#contact">お問い合わせ<span>CONTACT</span></a>
                     </li>
-                    <li class="drawer__list insta">
-                        <a class="drawer__link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/insta_sample_account/?hl=ja"><img src="./assets/img/pc/instagram-icon.png" alt="Instagram" width="24px"></a>
+                    <li class="drawer__list insta-menu">
+                        <a class="drawer__link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/insta_sample_account/?hl=ja"><img src="./assets/img/pc/instagram-icon.png" alt="Instagram"></a>
                     </li>
-                    <li class="drawer__list tel">
+                    <li class="drawer__list tel-menu">
                         <a class="drawer__link" href="tel:012-345-6789"><span>TEL</span>012-345-6789</a>
                     </li>
                 </ul>
@@ -146,7 +146,7 @@
         <div class="modal-covid" id="js-modal-covid">
             <div class="modal-covid__overlay" id="js-modal-covid__overlay"></div>
             <section class="modal-covid__container">
-                <h2 class="sectionTitle"><span class="sectionTitle-box left">感染症対策について</span></h2>
+                <h2 class="sectionTitle"><span class="sectionTitle-box left">感染症対策</span></h2>
                 <ul class="modal-covid__items">
                     <li class="modal-covid__item"><img src="./assets/img/pc/covid1.svg" alt="こまめな換気"></li>
                     <li class="modal-covid__item"><img src="./assets/img/pc/covid2.svg" alt="マスク着用"></li>
@@ -184,7 +184,7 @@
                         身近な”あなた専用サロン”です。
                     </p>
                     <p class="concept__text fadeIn">
-                        美容室のほとんどは、複数のスタッフと複数のお客様が１つの空間に集まり、場合によっては複数人のお客様を１人のスタッフが同時に担当することもあります。<br class="hidden-sm">
+                        美容室のほとんどは、複数のスタッフと複数のお客様が１つの空間に集まり、場合によっては複数人のお客様を１人のスタッフが同時に担当することもあります。<br class="hidden-sm">
                         当サロンではよりお客様にリラックスして欲しいという想いから、完全予約制で他のお客様とバッティングをしない１対１のあなただけの空間を提供しています。
                     </p>
                 </div>
@@ -407,39 +407,27 @@
                             <p class="info__shop-covid hidden-lg" id="js-info__shop-covid">＞ 感染症対策について</p>
                             <dl class="info__shop-items">
                                 <div class="info__shop-item">
-                                    <dt class="info__shop-title">
-                                        <h4>住所</h4>
-                                    </dt>
+                                    <dt class="info__shop-title">住所</dt>
                                     <dd class="info__shop-text address"><span>〒100-8111</span><br class="hidden-lg">東京都千代田区千代田1-1</dd>
                                 </div>
                                 <div class="info__shop-item">
-                                    <dt class="info__shop-title">
-                                        <h4>電話</h4>
-                                    </dt>
+                                    <dt class="info__shop-title">電話</dt>
                                     <dd class="info__shop-text">012-345-6789</dd>
                                 </div>
                                 <div class="info__shop-item">
-                                    <dt class="info__shop-title">
-                                        <h4>営業時間</h4>
-                                    </dt>
+                                    <dt class="info__shop-title">営業時間</dt>
                                     <dd class="info__shop-text">9:30～18:30 (最終受付18:30)</dd>
                                 </div>
                                 <div class="info__shop-item">
-                                    <dt class="info__shop-title">
-                                        <h4>定休日</h4>
-                                    </dt>
+                                    <dt class="info__shop-title">定休日</dt>
                                     <dd class="info__shop-text">月曜日 (不定休あり)</dd>
                                 </div>
                                 <div class="info__shop-item">
-                                    <dt class="info__shop-title">
-                                        <h4>駐車場</h4>
-                                    </dt>
+                                    <dt class="info__shop-title">駐車場</dt>
                                     <dd class="info__shop-text">あり (1台)</dd>
                                 </div>
                                 <div class="info__shop-item">
-                                    <dt class="info__shop-title">
-                                        <h4>お支払い方法</h4>
-                                    </dt>
+                                    <dt class="info__shop-title">お支払い方法</dt>
                                     <dd class="info__shop-text info__payment">
                                         <ul class="info__payment-items">
                                             <li class="info__payment-item">
@@ -622,7 +610,7 @@
                     </div>
                 </div>
                 <div class="sectionSubTitle right fadeIn-under">CONTACT</div>
-            </divclas>
+            </div>
         </section>
         <!-- //ここまでお問い合わせ -->
     </main>
@@ -640,7 +628,7 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p class="footer__copyright" lane="en"><small>©Synergy Salon</small></p>
+            <p class="footer__copyright" lang="en"><small>©Synergy Salon</small></p>
         </div>
     </footer>
     <!-- //ここまでフッター -->
