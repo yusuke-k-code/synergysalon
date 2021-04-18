@@ -170,6 +170,7 @@ body {
     }
 }
 
+/* メインカラーの背景設定 */
 .sectionBox {
     position: absolute;
     content: "";
@@ -199,7 +200,7 @@ body {
 ------------------------- */
 .fadeIn {
     opacity: 0;
-    transition: opacity 2.5s ease 0s;
+    transition: opacity 1.5s ease 0s;
 
     &.is-active {
         opacity: 1;
@@ -209,7 +210,7 @@ body {
 .fadeIn-under {
     transform: translateY(100px);
     opacity: 0;
-    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+    transition: transform 2s ease 0s, opacity 2s ease 0s;
 
     &.is-active {
         transform: translateY(0);
@@ -220,7 +221,7 @@ body {
 .fadeIn-top {
     transform: translateY(-100px);
     opacity: 0;
-    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+    transition: transform 2s ease 0s, opacity 2s ease 0s;
 
     &.is-active {
         transform: translateY(0);
@@ -231,7 +232,7 @@ body {
 .fadeIn-right {
     transform: translateX(100px);
     opacity: 0;
-    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+    transition: transform 2s ease 0s, opacity 2s ease 0s;
 
     &.is-active {
         transform: translateX(0);
@@ -242,7 +243,7 @@ body {
 .fadeIn-left {
     transform: translateX(-100px);
     opacity: 0;
-    transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
+    transition: transform 2s ease 0s, opacity 2s ease 0s;
 
     &.is-active {
         transform: translateX(0);

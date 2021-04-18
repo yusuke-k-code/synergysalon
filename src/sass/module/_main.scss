@@ -1271,32 +1271,51 @@
             left: 0;
             right: 0;
             margin: 0 auto;
-            width: 58px;
-            height: 58px;
-            border-top: solid 29px $color-text-title;
-            border-right: solid 29px transparent;
-            border-left: solid 29px transparent;
+            width: 48px;
+            height: 48px;
+            border-top: solid 24px $color-text-title;
+            border-right: solid 24px transparent;
+            border-left: solid 24px transparent;
+            
+            @include mq('md') {
+                width: 58px;
+                height: 58px;
+                border-top: solid 29px $color-text-title;
+                border-right: solid 29px transparent;
+                border-left: solid 29px transparent;
+            }
         }
     }
     
     &__text {
-        margin-top: 76px;
-        font-size: rem(24);
+        margin-top: 64px;
+        font-size: rem(20);
         font-weight: bold;
         line-height: leading(30, 24);
         color: $color-text-title;
         text-shadow: 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239), 0 0 16px rgb(239, 239, 239),;
         text-align: center;
+        
+        @include mq('md') {
+            margin-top: 76px;
+            font-size: rem(24);
+        }
     }
 
     &__tel {
         display: block;
-        margin-top: 32px;
-        font-size: rem(36);
+        margin-top: 28px;
+        font-size: rem(32);
         font-style: normal;
         font-weight: bold;
         text-shadow: 0 0 10px $color-bg, 0 0 10px $color-bg, 0 0 10px $color-bg, 0 0 10px $color-bg, 0 0 10px $color-bg, 0 0 10px $color-bg, 0 0 10px $color-bg;
         text-align: center;
+        
+        @include mq('md') {
+            display: block;
+            margin-top: 32px;
+            font-size: rem(36);
+        }
         
         span {
             margin-right: 8px;
@@ -1441,6 +1460,11 @@
 
     &__notice {
         display: inline-block;
+        font-size: rem(12);
+
+        @include mq('md') {
+            font-size: rem(16);
+        }
     }
 
     &__link {
@@ -1449,7 +1473,11 @@
     }
 
     &__items {
-        margin-top: 80px;
+        margin-top: 40px;
+        
+        @include mq('lg') {
+            margin-top: 80px;
+        }
     }
 
     &__item {

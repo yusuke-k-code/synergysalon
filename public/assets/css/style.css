@@ -416,6 +416,7 @@ body {
   right: 0;
 }
 
+/* メインカラーの背景設定 */
 .sectionBox {
   position: absolute;
   content: "";
@@ -447,8 +448,8 @@ body {
 ------------------------- */
 .fadeIn {
   opacity: 0;
-  -webkit-transition: opacity 2.5s ease 0s;
-  transition: opacity 2.5s ease 0s;
+  -webkit-transition: opacity 1.5s ease 0s;
+  transition: opacity 1.5s ease 0s;
 }
 
 .fadeIn.is-active {
@@ -459,10 +460,10 @@ body {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   opacity: 0;
-  -webkit-transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
+  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
 }
 
 .fadeIn-under.is-active {
@@ -475,10 +476,10 @@ body {
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
-  -webkit-transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
+  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
 }
 
 .fadeIn-top.is-active {
@@ -491,10 +492,10 @@ body {
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
   opacity: 0;
-  -webkit-transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
+  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
 }
 
 .fadeIn-right.is-active {
@@ -507,10 +508,10 @@ body {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
-  -webkit-transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s;
-  transition: transform 2.5s ease 0s, opacity 2.5s ease 0s, -webkit-transform 2.5s ease 0s;
+  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s;
+  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
 }
 
 .fadeIn-left.is-active {
@@ -2679,16 +2680,26 @@ SP時のドロワーメニュー
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 58px;
-  height: 58px;
-  border-top: solid 29px #608F8D;
-  border-right: solid 29px transparent;
-  border-left: solid 29px transparent;
+  width: 48px;
+  height: 48px;
+  border-top: solid 24px #608F8D;
+  border-right: solid 24px transparent;
+  border-left: solid 24px transparent;
+}
+
+@media screen and (min-width: 560px) {
+  .reserve__title::before {
+    width: 58px;
+    height: 58px;
+    border-top: solid 29px #608F8D;
+    border-right: solid 29px transparent;
+    border-left: solid 29px transparent;
+  }
 }
 
 .reserve__text {
-  margin-top: 76px;
-  font-size: 1.5rem;
+  margin-top: 64px;
+  font-size: 1.25rem;
   font-weight: bold;
   line-height: 1.25;
   color: #608F8D;
@@ -2696,14 +2707,29 @@ SP時のドロワーメニュー
   text-align: center;
 }
 
+@media screen and (min-width: 560px) {
+  .reserve__text {
+    margin-top: 76px;
+    font-size: 1.5rem;
+  }
+}
+
 .reserve__tel {
   display: block;
-  margin-top: 32px;
-  font-size: 2.25rem;
+  margin-top: 28px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: bold;
   text-shadow: 0 0 10px #FFF, 0 0 10px #FFF, 0 0 10px #FFF, 0 0 10px #FFF, 0 0 10px #FFF, 0 0 10px #FFF, 0 0 10px #FFF;
   text-align: center;
+}
+
+@media screen and (min-width: 560px) {
+  .reserve__tel {
+    display: block;
+    margin-top: 32px;
+    font-size: 2.25rem;
+  }
 }
 
 .reserve__tel span {
@@ -2906,6 +2932,13 @@ SP時のドロワーメニュー
 
 .contact__notice {
   display: inline-block;
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 560px) {
+  .contact__notice {
+    font-size: 1rem;
+  }
 }
 
 .contact__link {
@@ -2914,7 +2947,13 @@ SP時のドロワーメニュー
 }
 
 .contact__items {
-  margin-top: 80px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 960px) {
+  .contact__items {
+    margin-top: 80px;
+  }
 }
 
 @media screen and (min-width: 960px) {
