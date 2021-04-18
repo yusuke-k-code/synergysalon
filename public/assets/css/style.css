@@ -252,7 +252,7 @@ body {
 
 /* コンテンツインナー幅設定 */
 .inner {
-  margin: 0 15px;
+  padding: 0 15px;
 }
 
 @media screen and (min-width: 560px) {
@@ -271,7 +271,7 @@ body {
   line-height: 1.33333;
   color: #608F8D;
   text-align: center;
-  margin-top: 20px;
+  padding-top: 20px;
   z-index: 1;
   position: relative;
 }
@@ -418,6 +418,7 @@ body {
 
 .sectionBox {
   position: absolute;
+  content: "";
   bottom: -60px;
   left: 0;
   width: 100%;
@@ -425,12 +426,12 @@ body {
   z-index: -1;
 }
 
-.sectionBox.style {
+.sectionBox.bg-style {
   border-bottom: 200px solid rgba(139, 200, 137, 0.3);
   border-left: 40vw solid rgba(139, 200, 137, 0.3);
 }
 
-.sectionBox.insta {
+.sectionBox.bg-insta {
   border-bottom: 180px solid rgba(139, 200, 137, 0.3);
   border-right: 32vw solid rgba(139, 200, 137, 0.3);
 }
@@ -1303,14 +1304,18 @@ SP時のドロワーメニュー
 コンセプト
 ------------------------- */
 .concept {
-  margin-top: 100px;
-  position: relative;
+  padding: 100px 0;
+  background-color: #FFF;
 }
 
 @media screen and (min-width: 560px) {
   .concept {
-    margin-top: 140px;
+    padding-top: 140px;
   }
+}
+
+.concept__bg-wrapper {
+  position: relative;
 }
 
 .concept .sectionTitle {
@@ -1354,16 +1359,17 @@ SP時のドロワーメニュー
 /* -------------------------
 メニュー 
 ------------------------- */
-.menu {
-  margin-top: 100px;
-  background: transparent url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat top right/cover;
-  background-attachment: fixed;
-}
-
-@media screen and (min-width: 560px) {
-  .menu {
-    margin-top: 140px;
-  }
+.menu::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100vh;
+  background: url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat left top;
+  background-size: cover;
 }
 
 .menu .sectionTitle {
@@ -1546,7 +1552,19 @@ SP時のドロワーメニュー
 スタイル 
 ------------------------- */
 .style {
-  padding: 80px 0 0;
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.style::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  z-index: -1;
 }
 
 @media screen and (min-width: 560px) {
@@ -1556,10 +1574,6 @@ SP時のドロワーメニュー
     background: -webkit-linear-gradient(transparent 50%, rgba(139, 200, 137, 0.3) 50%);
     background: linear-gradient(transparent 50%, rgba(139, 200, 137, 0.3) 50%);
   }
-}
-
-.style__wrapper {
-  position: relative;
 }
 
 @media screen and (min-width: 1000px) {
@@ -1573,12 +1587,14 @@ SP時のドロワーメニュー
 
 .style__arrow {
   width: 100%;
+  max-width: 150px;
   margin: 0 auto 60px;
   position: relative;
 }
 
 @media screen and (min-width: 560px) {
   .style__arrow {
+    max-width: 200px;
     margin: 0 0 30px 0;
   }
 }
@@ -1592,8 +1608,6 @@ SP時のドロワーメニュー
 
 .style__arrow-line {
   display: block;
-  width: 100%;
-  max-width: 150px;
   height: 12px;
   margin: 0 auto;
   border-bottom: 1px solid #608F8D;
@@ -1604,7 +1618,6 @@ SP時のドロワーメニュー
 
 @media screen and (min-width: 560px) {
   .style__arrow-line {
-    max-width: 200px;
     margin: 0 auto 0 0;
   }
 }
@@ -1620,26 +1633,20 @@ SP時のドロワーメニュー
   font-family: "Courgette", cursive;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
-  text-align: right;
   position: absolute;
   top: -28px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  margin-right: 20px;
 }
 
 @media screen and (min-width: 560px) {
   .style__arrow-text {
-    left: 120px;
-    margin-right: 20px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .style__arrow-text {
+    left: auto;
     right: 0;
-    margin-right: 20px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    padding-right: 28px;
   }
 }
 
@@ -1766,20 +1773,41 @@ SP時のドロワーメニュー
 スタイリスト
 ------------------------- */
 .stylist {
-  margin-top: calc(100px + 60px);
+  padding-top: 100px;
   position: relative;
 }
 
 @media screen and (min-width: 560px) {
   .stylist {
-    margin-top: 140px;
+    padding-top: 140px;
   }
 }
 
 @media screen and (min-width: 960px) {
   .stylist {
+    padding-top: 140px;
+    margin: 0 auto;
+  }
+}
+
+.stylist::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  z-index: -1;
+}
+
+.stylist__bg-wrapper {
+  position: relative;
+}
+
+@media screen and (min-width: 960px) {
+  .stylist__bg-wrapper {
     max-width: 1000px;
-    margin: 140px auto 0;
   }
 }
 
@@ -1808,7 +1836,6 @@ SP時のドロワーメニュー
 }
 
 .stylist__profile {
-  margin: 0 15px;
   z-index: 1;
 }
 
@@ -2012,12 +2039,30 @@ SP時のドロワーメニュー
 インスタグラム
 ------------------------- */
 .insta {
-  margin-top: 80px;
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.insta::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  z-index: -1;
 }
 
 @media screen and (min-width: 560px) {
   .insta {
-    margin-top: 120px;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .insta {
+    padding-top: 120px;
   }
 }
 
@@ -2193,20 +2238,24 @@ SP時のドロワーメニュー
 店舗案内
 ------------------------- */
 .info {
-  margin-top: calc(100px + 60px);
-  position: relative;
-}
-
-@media screen and (min-width: 560px) {
-  .info {
-    margin-top: 140px;
-  }
+  padding: 100px 0;
+  background-color: #FFF;
 }
 
 @media screen and (min-width: 960px) {
   .info {
+    padding: 140px 0;
+  }
+}
+
+.info__bg-wrapper {
+  position: relative;
+}
+
+@media screen and (min-width: 960px) {
+  .info__bg-wrapper {
     max-width: 1000px;
-    margin: 140px auto 0;
+    margin: 0 auto;
   }
 }
 
@@ -2564,16 +2613,17 @@ SP時のドロワーメニュー
 /* -------------------------
 予約
 ------------------------- */
-.reserve {
-  margin-top: 100px;
-  background: transparent url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat center top/cover;
-  background-attachment: fixed;
-}
-
-@media screen and (min-width: 560px) {
-  .reserve {
-    margin-top: 140px;
-  }
+.reserve::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100vh;
+  background: url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat left top;
+  background-size: cover;
 }
 
 .reserve .sectionTitle {
@@ -2655,28 +2705,40 @@ SP時のドロワーメニュー
   }
 }
 
+@media screen and (min-width: 960px) {
+  .reserve__items {
+    margin-top: 32px;
+  }
+}
+
 .reserve__item {
   width: 250px;
   -webkit-box-shadow: 2.1px 2.1px 9.5px 0.5px rgba(162, 158, 157, 0.7);
           box-shadow: 2.1px 2.1px 9.5px 0.5px rgba(162, 158, 157, 0.7);
   position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 560px) {
+  .reserve__item {
+    margin: 0;
+  }
 }
 
 .reserve__item:nth-child(1) {
   border-radius: 15px;
   background-color: #FFF;
-  margin: 0 auto 0;
 }
 
 @media screen and (min-width: 560px) {
   .reserve__item:nth-child(1) {
-    margin: 40px 45px 0 auto;
+    margin: 40px 80px 0 0;
   }
 }
 
 @media screen and (min-width: 960px) {
   .reserve__item:nth-child(1) {
-    margin: 40px 70px 0 auto;
+    margin: 40px 100px 0 0;
   }
 }
 
@@ -2688,7 +2750,7 @@ SP時のドロワーメニュー
   border-radius: 15px;
   min-width: 250px;
   background-color: #FFF;
-  margin: 40px auto 0;
+  margin-top: 40px;
 }
 
 .reserve__item:nth-child(2) img {
@@ -2776,14 +2838,18 @@ SP時のドロワーメニュー
 お問い合わせ 
 ------------------------- */
 .contact {
-  margin-top: 100px;
-  position: relative;
+  padding: 100px 0;
+  background-color: #FFF;
 }
 
 @media screen and (min-width: 560px) {
   .contact {
-    margin-top: 140px;
+    padding: 140px 0;
   }
+}
+
+.contact__bg-wrapper {
+  position: relative;
 }
 
 .contact .sectionTitle {
@@ -3236,10 +3302,6 @@ SP時のドロワーメニュー
 /* -------------------------
 フッター
 ------------------------- */
-.footer {
-  margin-top: 140px;
-}
-
 .footer__top {
   background: transparent url(../../../public/assets/img/pc/footer-bg.jpg) no-repeat center top/cover;
   position: relative;

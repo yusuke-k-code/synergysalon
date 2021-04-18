@@ -17,7 +17,7 @@ body {
 
 /* コンテンツインナー幅設定 */
 .inner {
-    margin: 0 15px;
+    padding: 0 15px;
     
     @include mq('md') {
         max-width: $layout-inner-width;
@@ -34,7 +34,7 @@ body {
     line-height: leading(40, 30);
     color: $color-text-title;
     text-align: center;
-    margin-top: 20px;
+    padding-top: 20px;
     z-index: 1;
     position: relative;
     
@@ -172,18 +172,19 @@ body {
 
 .sectionBox {
     position: absolute;
+    content: "";
     bottom: -60px;
     left: 0;
     width: 100%;
     height: 83%;
     z-index: -1;
     
-    &.style {
+    &.bg-style {
         border-bottom: 200px solid $color-primary-opacity;
         border-left: 40vw solid $color-primary-opacity;
     }
     
-    &.insta {
+    &.bg-insta {
         border-bottom: 180px solid $color-primary-opacity;
         border-right: 32vw solid $color-primary-opacity;
     }
