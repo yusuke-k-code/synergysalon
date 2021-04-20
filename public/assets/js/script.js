@@ -182,9 +182,11 @@ $(function () {
 ------------------------- */
 $(document).ready(function () {
     var browserHeight = $(window).height();
-    $(".swiper-container").height(browserHeight); // ブラウザの縦のサイズを取得
+    var browserWidth = $(window).width();
+    $(".swiper-container").height(browserHeight).width(browserWidth);
 });
-$(window).resize(function () { // ページをリサイズした時の処理
+$(window).resize(function () {
     var browserHeight = $(window).height();
-    $(".swiper-container").height(browserHeight); // ブラウザの縦のサイズを取得
+    var browserWidth = $(window).width();
+    $(".swiper-container").height(browserHeight).width(browserWidth);
 });
