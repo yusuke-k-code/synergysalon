@@ -7,7 +7,7 @@ Swiper
     box-shadow: 0px 4px 10px 1px rgba(162, 158, 157, .8);
     
     @include mq('lg') {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         height: calc(100vh - #{$header-height-pc});
     }
