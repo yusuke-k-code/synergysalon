@@ -182,11 +182,9 @@ $(function () {
 ------------------------- */
 $(document).ready(function () {
     var browserHeight = $(window).height();
-    var browserWidth = $(window).width();
-    $(".swiper-container").height(browserHeight).width(browserWidth);
+    $(".swiper-container").height(browserHeight);
 });
 $(window).resize(function () {
     var browserHeight = $(window).height();
-    var browserWidth = $(window).width();
-    $(".swiper-container").height(browserHeight).width(browserWidth);
+    $(".swiper-container").height(browserHeight);
 });
