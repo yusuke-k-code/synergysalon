@@ -143,7 +143,7 @@
     // フェードインアニメーション
     .fadeIn-fv {
         opacity: 0;
-        transition: opacity .8s ease .1s;
+        transition: opacity .8s ease-out .1s;
     
         &.is-active {
             opacity: 1;
@@ -490,10 +490,12 @@
             background-color: $color-primary;
 
             img {
-                transition: transform .4s ease-out 0s, opacity 1.5s ease 0.2s;
+                transition: transform .2s ease-out 0s, opacity 1.5s ease 0.1s;
     
-                &:hover {
-                    transform: scale(1.05);
+                @include mq('lg') {
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
@@ -655,7 +657,7 @@
         }
 
         img {
-            transition: opacity 1.5s ease 0.2s;
+            transition: opacity 1.5s ease 0.1s;
         }
     }
     
@@ -873,10 +875,12 @@
 
         &-link {
             display: block;
-            transition: opacity .3s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
             
-            &:hover {
-                opacity: .7;
+            @include mq('lg') {
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
     }
@@ -913,14 +917,16 @@
 
         &-link{
             display: block;
-            transition: transform .4s ease-out 0s;
+            transition: transform .2s ease-out 0s;
 
-            &:hover {
-                transform: scale(1.05);
+            @include mq('lg') {
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
 
             img {
-                transition: opacity 1.5s ease 0.2s;
+                transition: opacity 1.5s ease 0.1s;
             }
         }
     }
@@ -1083,12 +1089,14 @@
         &-covid {
             text-decoration: underline;
             cursor: pointer;
-            transition: opacity .3s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
             text-align: center;
             margin-top: 30px;
 
-            &:hover {
-                opacity: .6;
+            @include mq('lg') {
+                &:hover {
+                    opacity: .6;
+                }
             }
         }
 
@@ -1414,11 +1422,13 @@
         
         &-link {
             display: block;
-            transition: opacity .3s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
             -webkit-transform-style: preserve-3d; //transformとopacity併用によるsafariの不具合対応
 
-            &:hover {
-                opacity: .7;
+            @include mq('lg') {
+                &:hover {
+                    opacity: .7;
+                }
             }
             
             img {
@@ -1470,6 +1480,13 @@
     &__link {
         display: inline-block;
         color: $color-text-black;
+        transition: opacity .2s ease-out 0s;
+        
+        @include mq('lg') {
+            &:hover {
+                opacity: .7;
+            }
+        }
     }
 
     &__items {
@@ -1575,10 +1592,17 @@
             text-decoration: underline;
             margin-left: 24px;
             font-size: rem(15);
+            transition: opacity .2s ease-out 0s;
             
             @include mq('md') {
                 margin-left: 28px;
                 font-size: rem(16);
+            }
+        
+            @include mq('lg') {
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
 
@@ -1593,7 +1617,7 @@
             height: 18px;
             border: 1px solid $color-primary;
             cursor: pointer;
-            transition: all .3s ease 0s;
+            transition: transform .3s ease 0s;
             
             @include mq('md') {
                 width: 20px;
@@ -1613,11 +1637,18 @@
             border: none;
             
             &.is-active {
-                @include _btnHover;
-                background-color: $color-bg;
-                color: $color-text-primary;
+                background-color: $color-primary;
+                color: $color-text-white;
                 border: 1px solid $color-primary;
                 cursor: pointer;
+
+                @include mq('lg') {
+                    @include _btnHover;
+                    background-color: $color-bg;
+                    color: $color-text-primary;
+                    border: 1px solid $color-primary;
+                    cursor: pointer;
+                }
             }
         }
     }

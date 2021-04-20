@@ -35,13 +35,13 @@
 
 @media screen and (min-width: 560px) {
   .floating-btn.toTop {
-    bottom: 494px;
+    bottom: 134px;
   }
 }
 
 @media screen and (min-width: 960px) {
   .floating-btn.toTop {
-    bottom: 514px;
+    bottom: 164px;
   }
 }
 
@@ -111,7 +111,7 @@
 
 @media screen and (min-width: 560px) {
   .floating-btn.toReserve {
-    bottom: 420px;
+    bottom: 70px;
   }
 }
 
@@ -448,8 +448,8 @@ body {
 ------------------------- */
 .fadeIn {
   opacity: 0;
-  -webkit-transition: opacity 1.5s ease 0s;
-  transition: opacity 1.5s ease 0s;
+  -webkit-transition: opacity 1s ease 0s;
+  transition: opacity 1s ease 0s;
 }
 
 .fadeIn.is-active {
@@ -460,10 +460,10 @@ body {
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   opacity: 0;
-  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  -webkit-transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
 }
 
 .fadeIn-under.is-active {
@@ -476,10 +476,10 @@ body {
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
-  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  -webkit-transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
 }
 
 .fadeIn-top.is-active {
@@ -492,10 +492,10 @@ body {
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
   opacity: 0;
-  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  -webkit-transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
 }
 
 .fadeIn-right.is-active {
@@ -508,10 +508,10 @@ body {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
-  -webkit-transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: opacity 2s ease 0s, -webkit-transform 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s;
-  transition: transform 2s ease 0s, opacity 2s ease 0s, -webkit-transform 2s ease 0s;
+  -webkit-transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s;
+  transition: transform 1.5s ease 0s, opacity 1.5s ease 0s, -webkit-transform 1.5s ease 0s;
 }
 
 .fadeIn-left.is-active {
@@ -641,8 +641,8 @@ body {
   padding-bottom: 16px;
   font-size: 1rem;
   color: #fefefe;
-  -webkit-transition: opacity .3s ease-out 0s;
-  transition: opacity .3s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
 }
 
 .header__nav-link span {
@@ -699,8 +699,8 @@ body {
   font-size: 0.875rem;
   line-height: 1;
   position: relative;
-  -webkit-transition: opacity .3s ease-out 0s;
-  transition: opacity .3s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
   cursor: pointer;
 }
 
@@ -731,8 +731,8 @@ body {
 .header__info-link {
   display: block;
   color: #fefefe;
-  -webkit-transition: opacity .3s ease-out 0s;
-  transition: opacity .3s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
 }
 
 .header__info-link:hover {
@@ -818,8 +818,8 @@ SP時のドロワーメニュー
   z-index: 25;
   display: none;
   opacity: 0;
-  -webkit-transition: opacity .3s ease-out 0s;
-  transition: opacity .3s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
 }
 
 @media screen and (max-width: 959px) {
@@ -942,8 +942,8 @@ SP時のドロワーメニュー
 }
 
 .drawer__link {
-  -webkit-transition: opacity .3s ease 0s;
-  transition: opacity .3s ease 0s;
+  -webkit-transition: opacity .2s ease 0s;
+  transition: opacity .2s ease 0s;
   color: #fefefe;
   display: -webkit-box;
   display: -webkit-flex;
@@ -960,8 +960,10 @@ SP時のドロワーメニュー
           align-items: center;
 }
 
-.drawer__link:hover {
-  opacity: .7;
+@media screen and (min-width: 960px) {
+  .drawer__link:hover {
+    opacity: .7;
+  }
 }
 
 .drawer__link span {
@@ -1117,21 +1119,22 @@ SP時のドロワーメニュー
   -webkit-transform-origin: right;
           transform-origin: right;
   z-index: -1;
-  -webkit-transition: -webkit-transform .4s ease-out 0s;
-  transition: -webkit-transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s, -webkit-transform .4s ease-out 0s;
+  -webkit-transition: -webkit-transform .3s ease-out 0s;
+  transition: -webkit-transform .3s ease-out 0s;
+  transition: transform .3s ease-out 0s;
+  transition: transform .3s ease-out 0s, -webkit-transform .3s ease-out 0s;
 }
 
-.modal-covid__btn:hover {
-  color: #fefefe;
-}
-
-.modal-covid__btn:hover::before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+@media screen and (min-width: 960px) {
+  .modal-covid__btn:hover {
+    color: #fefefe;
+  }
+  .modal-covid__btn:hover::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
 }
 
 .modal-covid.is-open {
@@ -1320,8 +1323,8 @@ SP時のドロワーメニュー
 
 .fv .fadeIn-fv {
   opacity: 0;
-  -webkit-transition: opacity .8s ease .1s;
-  transition: opacity .8s ease .1s;
+  -webkit-transition: opacity .8s ease-out .1s;
+  transition: opacity .8s ease-out .1s;
 }
 
 .fv .fadeIn-fv.is-active {
@@ -1728,15 +1731,17 @@ SP時のドロワーメニュー
 }
 
 .style__item-img img {
-  -webkit-transition: opacity 1.5s ease 0.2s, -webkit-transform .4s ease-out 0s;
-  transition: opacity 1.5s ease 0.2s, -webkit-transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s, opacity 1.5s ease 0.2s;
-  transition: transform .4s ease-out 0s, opacity 1.5s ease 0.2s, -webkit-transform .4s ease-out 0s;
+  -webkit-transition: opacity 1.5s ease 0.1s, -webkit-transform .2s ease-out 0s;
+  transition: opacity 1.5s ease 0.1s, -webkit-transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s, opacity 1.5s ease 0.1s;
+  transition: transform .2s ease-out 0s, opacity 1.5s ease 0.1s, -webkit-transform .2s ease-out 0s;
 }
 
-.style__item-img img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+@media screen and (min-width: 960px) {
+  .style__item-img img:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
 }
 
 .style__item-name {
@@ -1937,8 +1942,8 @@ SP時のドロワーメニュー
 }
 
 .stylist__img img {
-  -webkit-transition: opacity 1.5s ease 0.2s;
-  transition: opacity 1.5s ease 0.2s;
+  -webkit-transition: opacity 1.5s ease 0.1s;
+  transition: opacity 1.5s ease 0.1s;
 }
 
 @media screen and (min-width: 960px) {
@@ -2193,12 +2198,14 @@ SP時のドロワーメニュー
 
 .insta__img-link {
   display: block;
-  -webkit-transition: opacity .3s ease-out 0s;
-  transition: opacity .3s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
 }
 
-.insta__img-link:hover {
-  opacity: .7;
+@media screen and (min-width: 960px) {
+  .insta__img-link:hover {
+    opacity: .7;
+  }
 }
 
 .insta__items {
@@ -2246,20 +2253,22 @@ SP時のドロワーメニュー
 
 .insta__item-link {
   display: block;
-  -webkit-transition: -webkit-transform .4s ease-out 0s;
-  transition: -webkit-transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s, -webkit-transform .4s ease-out 0s;
+  -webkit-transition: -webkit-transform .2s ease-out 0s;
+  transition: -webkit-transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s, -webkit-transform .2s ease-out 0s;
 }
 
-.insta__item-link:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+@media screen and (min-width: 960px) {
+  .insta__item-link:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
 }
 
 .insta__item-link img {
-  -webkit-transition: opacity 1.5s ease 0.2s;
-  transition: opacity 1.5s ease 0.2s;
+  -webkit-transition: opacity 1.5s ease 0.1s;
+  transition: opacity 1.5s ease 0.1s;
 }
 
 /* -------------------------
@@ -2470,14 +2479,16 @@ SP時のドロワーメニュー
 .info__shop-covid {
   text-decoration: underline;
   cursor: pointer;
-  -webkit-transition: opacity .3s ease-out 0s;
-  transition: opacity .3s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
   text-align: center;
   margin-top: 30px;
 }
 
-.info__shop-covid:hover {
-  opacity: .6;
+@media screen and (min-width: 960px) {
+  .info__shop-covid:hover {
+    opacity: .6;
+  }
 }
 
 .info__shop-items {
@@ -2874,13 +2885,15 @@ SP時のドロワーメニュー
 
 .reserve__item-link {
   display: block;
-  -webkit-transition: opacity .3s ease-out 0s;
-  transition: opacity .3s ease-out 0s;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
   -webkit-transform-style: preserve-3d;
 }
 
-.reserve__item-link:hover {
-  opacity: .7;
+@media screen and (min-width: 960px) {
+  .reserve__item-link:hover {
+    opacity: .7;
+  }
 }
 
 .reserve__item-link img {
@@ -2944,6 +2957,14 @@ SP時のドロワーメニュー
 .contact__link {
   display: inline-block;
   color: #666666;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
+}
+
+@media screen and (min-width: 960px) {
+  .contact__link:hover {
+    opacity: .7;
+  }
 }
 
 .contact__items {
@@ -3060,12 +3081,20 @@ SP時のドロワーメニュー
   text-decoration: underline;
   margin-left: 24px;
   font-size: 0.9375rem;
+  -webkit-transition: opacity .2s ease-out 0s;
+  transition: opacity .2s ease-out 0s;
 }
 
 @media screen and (min-width: 560px) {
   .contact__footer-link {
     margin-left: 28px;
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .contact__footer-link:hover {
+    opacity: .7;
   }
 }
 
@@ -3080,8 +3109,10 @@ SP時のドロワーメニュー
   height: 18px;
   border: 1px solid #8BC889;
   cursor: pointer;
-  -webkit-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
+  -webkit-transition: -webkit-transform .3s ease 0s;
+  transition: -webkit-transform .3s ease 0s;
+  transition: transform .3s ease 0s;
+  transition: transform .3s ease 0s, -webkit-transform .3s ease 0s;
 }
 
 @media screen and (min-width: 560px) {
@@ -3119,56 +3150,64 @@ SP時のドロワーメニュー
 }
 
 .contact__footer-submit.is-active {
-  text-decoration: none;
-  border: none;
-  background-color: #FFF;
-  color: #8BC889;
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: bold;
-  width: 250px;
-  max-width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  border: 1px solid #8BC889;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  -webkit-transition: color .3s ease .1s;
-  transition: color .3s ease .1s;
-  background-color: #FFF;
-  color: #8BC889;
+  background-color: #8BC889;
+  color: #fefefe;
   border: 1px solid #8BC889;
   cursor: pointer;
 }
 
-.contact__footer-submit.is-active::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #8BC889;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  z-index: -1;
-  -webkit-transition: -webkit-transform .4s ease-out 0s;
-  transition: -webkit-transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s, -webkit-transform .4s ease-out 0s;
-}
-
-.contact__footer-submit.is-active:hover {
-  color: #fefefe;
-}
-
-.contact__footer-submit.is-active:hover::before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+@media screen and (min-width: 960px) {
+  .contact__footer-submit.is-active {
+    text-decoration: none;
+    border: none;
+    background-color: #FFF;
+    color: #8BC889;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: bold;
+    width: 250px;
+    max-width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #8BC889;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color .3s ease .1s;
+    transition: color .3s ease .1s;
+    background-color: #FFF;
+    color: #8BC889;
+    border: 1px solid #8BC889;
+    cursor: pointer;
+  }
+  .contact__footer-submit.is-active::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8BC889;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    z-index: -1;
+    -webkit-transition: -webkit-transform .3s ease-out 0s;
+    transition: -webkit-transform .3s ease-out 0s;
+    transition: transform .3s ease-out 0s;
+    transition: transform .3s ease-out 0s, -webkit-transform .3s ease-out 0s;
+  }
+  @media screen and (min-width: 960px) {
+    .contact__footer-submit.is-active:hover {
+      color: #fefefe;
+    }
+    .contact__footer-submit.is-active:hover::before {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: left;
+              transform-origin: left;
+    }
+  }
 }
 
 .contact .message {
@@ -3431,21 +3470,22 @@ SP時のドロワーメニュー
   -webkit-transform-origin: right;
           transform-origin: right;
   z-index: -1;
-  -webkit-transition: -webkit-transform .4s ease-out 0s;
-  transition: -webkit-transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s;
-  transition: transform .4s ease-out 0s, -webkit-transform .4s ease-out 0s;
+  -webkit-transition: -webkit-transform .3s ease-out 0s;
+  transition: -webkit-transform .3s ease-out 0s;
+  transition: transform .3s ease-out 0s;
+  transition: transform .3s ease-out 0s, -webkit-transform .3s ease-out 0s;
 }
 
-.modal-privacy__btn:hover {
-  color: #fefefe;
-}
-
-.modal-privacy__btn:hover::before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+@media screen and (min-width: 960px) {
+  .modal-privacy__btn:hover {
+    color: #fefefe;
+  }
+  .modal-privacy__btn:hover::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
 }
 
 @media screen and (min-width: 560px) {

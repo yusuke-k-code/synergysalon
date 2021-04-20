@@ -85,7 +85,7 @@
             padding-bottom: 16px;
             font-size: rem(16);
             color: $color-text-white;
-            transition: opacity .3s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
 
             span {
                 position: absolute;
@@ -133,7 +133,7 @@
             font-size: rem(14);
             line-height: 1;
             position: relative;
-            transition: opacity .3s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
             cursor: pointer;
 
             &::before {
@@ -163,7 +163,7 @@
         &-link {
             display: block;
             color: $color-text-white;
-            transition: opacity .3s ease-out 0s;
+            transition: opacity .2s ease-out 0s;
     
             &:hover {
                 opacity: .6;
@@ -245,7 +245,7 @@ SP時のドロワーメニュー
     @include z-index("drawer-overlay");
     display: none;
     opacity: 0;
-    transition: opacity .3s ease-out 0s;
+    transition: opacity .2s ease-out 0s;
 
     @include mq('under-md') {
         
@@ -349,14 +349,16 @@ SP時のドロワーメニュー
     }
     
     &__link {
-        transition: opacity .3s ease 0s;
+        transition: opacity .2s ease 0s;
         color: $color-text-white;
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        &:hover {
-            opacity: .7;
+        @include mq('lg') {
+            &:hover {
+                opacity: .7;
+            }
         }
 
         span {

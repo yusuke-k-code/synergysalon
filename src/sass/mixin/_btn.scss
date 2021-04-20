@@ -33,15 +33,17 @@
         transform: scaleX(0);
         transform-origin: right;
         z-index: -1;
-        transition: transform .4s ease-out 0s;
+        transition: transform .3s ease-out 0s;
     }
 
-    &:hover {
-        color: $color-text-white;
-
-        &::before {
-            transform: scaleX(1);
-            transform-origin: left;
+    @include mq('lg') {
+        &:hover {
+            color: $color-text-white;
+    
+            &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
         }
     }
 }
@@ -71,11 +73,11 @@
         background-color: $color-primary;
 
         @include mq('md') {
-            bottom: 494px;
+            bottom: 134px;
         }
 
         @include mq('lg') {
-            bottom: 514px;
+            bottom: 164px;
         }
 
         a {
@@ -137,7 +139,7 @@
         background-color: $color-text-title;
         
         @include mq('md') {
-            bottom: 420px;
+            bottom: 70px;
         }
 
         a {
