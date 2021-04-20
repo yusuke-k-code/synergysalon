@@ -559,7 +559,7 @@ body {
   top: 0;
   left: 0;
   background-color: transparent;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   z-index: 20;
   /* ナビゲーション */
@@ -1397,7 +1397,7 @@ SP時のドロワーメニュー
   top: 0;
   left: 0;
   z-index: -10;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat left top;
   background-size: cover;
@@ -2659,7 +2659,7 @@ SP時のドロワーメニュー
   top: 0;
   left: 0;
   z-index: -10;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(../../../public/assets/img/pc/menu_bg.jpg) no-repeat left top;
   background-size: cover;
@@ -3596,7 +3596,7 @@ SP時のドロワーメニュー
 Swiper
 ------------------------- */
 .swiper-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   -webkit-box-shadow: 0px 4px 10px 1px rgba(162, 158, 157, 0.8);
           box-shadow: 0px 4px 10px 1px rgba(162, 158, 157, 0.8);
