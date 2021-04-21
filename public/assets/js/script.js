@@ -181,10 +181,16 @@ $(function () {
 100vhのiOS対策
 ------------------------- */
 $(document).ready(function () {
-    var browserHeight = $(window).height();
-    $(".swiper-container").height(browserHeight);
+    if ($(window).width() > 960) {
+        var browserHeight = $(window).height();
+        var header = $('.header').innerHeight();
+        $(".swiper-container").height(browserHeight - header);
+    }
 });
 $(window).resize(function () {
-    var browserHeight = $(window).height();
-    $(".swiper-container").height(browserHeight);
+    if ($(window).width() > 960) {
+        var browserHeight = $(window).height();
+        var header = $('.header').innerHeight();
+        $(".swiper-container").height(browserHeight - header);
+    }
 });
