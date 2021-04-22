@@ -82,10 +82,10 @@
 
         @include mq('lg') {
             position: relative;
-            top: calc(-#{$header-height-pc} - 6%);
+            bottom: calc(#{$header-height-pc} + 5%);
             width: 100px;
             font-family: $font-family-sectionSubTitle;
-            font-size: .6rem;
+            font-size: rem(10);
             letter-spacing: .1em;
             overflow: hidden;
             transform: rotate(90deg);

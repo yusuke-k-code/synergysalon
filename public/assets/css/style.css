@@ -242,6 +242,7 @@ body {
   line-height: 1.875;
   color: #666666;
   font-family: "Noto Sans JP", sans-serif;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 960px) {
@@ -1248,10 +1249,10 @@ SP時のドロワーメニュー
 @media screen and (min-width: 960px) {
   .fv__scroll {
     position: relative;
-    top: calc(-70px - 6%);
+    bottom: calc(70px + 5%);
     width: 100px;
     font-family: "Roboto", sans-serif;
-    font-size: .6rem;
+    font-size: 0.625rem;
     letter-spacing: .1em;
     overflow: hidden;
     -webkit-transform: rotate(90deg);

@@ -7,6 +7,8 @@ body {
     line-height: leading(30, 16);
     color: $color-text-black;
     font-family: $font-family-ja;
+    overflow-x: hidden; //Edgeの横スクロール対策
+    
 }
 
 @include mq('lg') {
