@@ -185,6 +185,9 @@ $(document).ready(function () {
         var browserHeight = $(window).height();
         var header = $('.header').innerHeight();
         $(".swiper-container").height(browserHeight - header);
+    } else {
+        var browserHeight = $(window).height();
+        $(".swiper-container").height(browserHeight);
     }
 });
 $(window).resize(function () {
@@ -192,5 +195,8 @@ $(window).resize(function () {
         var browserHeight = $(window).height();
         var header = $('.header').innerHeight();
         $(".swiper-container").height(browserHeight - header);
+    } else {
+        var browserHeight = $(window).height();
+        $(".swiper-container").height(browserHeight);
     }
 });
